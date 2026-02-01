@@ -93,7 +93,7 @@ export function Hero() {
                 <a href="#contact">Contact Me</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 border-accent/30 hover:bg-accent/10">
-                <a href="/Ricktho_Sarkar_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1A_C9qNiDxB757loksaqB1rOnrFQ98dYH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <FileText className="w-4 h-4 mr-2" />
                   Resume
                 </a>

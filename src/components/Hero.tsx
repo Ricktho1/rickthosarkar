@@ -10,9 +10,9 @@ const stats = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
+    <section className="py-20 lg:py-32 relative overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 neural-grid opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background" />
 
       {/* Floating Orbs */}
       <motion.div

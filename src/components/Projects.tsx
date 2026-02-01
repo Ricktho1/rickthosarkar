@@ -79,7 +79,7 @@ const projects = [
       "Integrated computer vision for crop detection and localization",
       "Coordinated between mechanical, electronics, and software teams as Team Lead",
     ],
-    outcome: "National Finalist in Robocon 2025 after qualifying Stage 1 and 2, out of 100+ colleges across India.",
+    outcome: "Qualified Stage 1 of National Robocon 2024 and got an opportunity to exhibit our bot at the finals.",
     tech: ["Python", "Gazebo", "ROS", "Segmentation", "PID", "Jetson Nano", "Raspberry Pi", "SLAM"],
     image: projectAgri,
     featured: true,

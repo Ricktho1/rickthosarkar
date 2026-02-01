@@ -75,7 +75,7 @@ export function Hero() {
               transition={{ delay: 0.6 }}
               className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Building intelligent, real-world systems at the intersection of AI, robotics, and autonomy.
+              Building intelligent, real-world systems at the intersection of AI, robotics, and autonomy with an undying passion for the mysteries and philosophies of this universe!
             </motion.p>
 
             {/* CTA Buttons */}
@@ -125,7 +125,7 @@ export function Hero() {
               className="flex gap-4 justify-center lg:justify-start mt-8"
             >
               <a
-                href="https://github.com"
+                href="https://github.com/Ricktho1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary/20 transition-colors group"
@@ -133,7 +133,7 @@ export function Hero() {
                 <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/rickthosarkar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary/20 transition-colors group"
@@ -141,7 +141,7 @@ export function Hero() {
                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a
-                href="mailto:ricktho@example.com"
+                href="mailto:rickthosarkar77@gmail.com"
                 className="p-3 rounded-full bg-muted hover:bg-primary/20 transition-colors group"
               >
                 <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />

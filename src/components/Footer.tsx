@@ -18,13 +18,13 @@ export function Footer() {
 
           {/* Tagline */}
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Built with <Heart className="w-4 h-4 text-destructive fill-current" /> and AI
+            What are you waiting for? Let's have a quick chat!
           </p>
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/Ricktho1"
+              href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-muted transition-colors"
@@ -33,7 +33,7 @@ export function Footer() {
               <Github className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
             </a>
             <a
-              href="https://linkedin.com/in/rickthosarkar"
+              href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-muted transition-colors"
@@ -42,7 +42,7 @@ export function Footer() {
               <Linkedin className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
             </a>
             <a
-              href="mailto:ricktho.sarkar.cd.eee22@itbhu.ac.in"
+              href="mailto:ricktho.sarkar@iitbhu.ac.in"
               className="p-2 rounded-lg hover:bg-muted transition-colors"
               aria-label="Email"
             >

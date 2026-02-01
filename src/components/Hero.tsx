@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImage from "@/assets/profile.jpg";
 
@@ -93,6 +93,12 @@ export function Hero() {
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 border-primary/30 hover:bg-primary/10">
                 <a href="#contact">Contact Me</a>
               </Button>
+              <Button asChild variant="outline" size="lg" className="rounded-full px-8 border-accent/30 hover:bg-accent/10">
+                <a href="/Ricktho_Sarkar_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <FileText className="w-4 h-4 mr-2" />
+                  Resume
+                </a>
+              </Button>
             </motion.div>
 
             {/* Stats */}
@@ -118,7 +124,7 @@ export function Hero() {
               className="flex gap-4 justify-center lg:justify-start mt-8"
             >
               <a
-                href="https://github.com"
+                href="https://github.com/Ricktho1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary/20 transition-colors group"
@@ -126,7 +132,7 @@ export function Hero() {
                 <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/rickthosarkar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary/20 transition-colors group"
@@ -134,7 +140,7 @@ export function Hero() {
                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a
-                href="mailto:ricktho@example.com"
+                href="mailto:ricktho.sarkar.cd.eee22@itbhu.ac.in"
                 className="p-3 rounded-full bg-muted hover:bg-primary/20 transition-colors group"
               >
                 <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />

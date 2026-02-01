@@ -3,9 +3,6 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImage from "@/assets/profile.jpg";
 const stats = [{
-  value: "8.19",
-  label: "GPA"
-}, {
   value: "5+",
   label: "Projects"
 }, {

@@ -10,7 +10,7 @@ const stats = [{
   label: "Internships"
 }];
 export function Hero() {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 neural-grid opacity-50" />
       

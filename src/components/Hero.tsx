@@ -5,7 +5,7 @@ import profileImage from "@/assets/profile.jpg";
 
 const stats = [
   { value: "5+", label: "Projects" },
-  { value: "3+", label: "Internships" },
+  { value: "3", label: "Internships" },
 ];
 
 export function Hero() {

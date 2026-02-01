@@ -35,8 +35,8 @@ export function Education() {
           </h2>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Main Education Card */}
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Main Education Card - IIT BHU */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -68,7 +68,7 @@ export function Education() {
 
                 <div className="flex flex-wrap items-center gap-4 mb-6">
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-sm">
-                    2022 - 2026
+                    Nov 2022 - Oct 2026
                   </span>
                   <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">
                     Expected Graduation
@@ -95,6 +95,73 @@ export function Education() {
               </div>
             </div>
           </motion.div>
+
+          {/* Secondary Education Cards */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Darjeeling Public School */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="glass-card rounded-2xl p-6 hover-glow"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-6 h-6 text-accent" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <div>
+                      <h3 className="text-lg font-bold text-foreground">
+                        CBSE Class XII
+                      </h3>
+                      <p className="text-primary font-medium text-sm">
+                        Darjeeling Public School
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold gradient-text">88.4%</div>
+                    </div>
+                  </div>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-xs">
+                    April 2020 - June 2022
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Don Bosco School */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="glass-card rounded-2xl p-6 hover-glow"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-6 h-6 text-accent" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <div>
+                      <h3 className="text-lg font-bold text-foreground">
+                        ICSE Class X
+                      </h3>
+                      <p className="text-primary font-medium text-sm">
+                        Don Bosco School, Siliguri
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold gradient-text">96%</div>
+                    </div>
+                  </div>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-xs">
+                    April 2020
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

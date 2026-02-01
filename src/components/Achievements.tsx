@@ -59,7 +59,7 @@ export function Achievements() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section id="achievements" className="py-20 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10" ref={ref}>

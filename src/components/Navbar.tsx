@@ -125,10 +125,21 @@ export function Navbar() {
                   key={link.name}
                   href={link.href}
                   className="px-4 py-3 text-foreground hover:bg-muted rounded-lg transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+
+                    setTimeout(() => {
+                      document.querySelector(link.href)?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }, 250);
+                  }}
                 >
                   {link.name}
                 </a>
+
               ))}
               <Button asChild className="mt-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">
                 <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Let's Talk</a>

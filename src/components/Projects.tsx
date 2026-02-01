@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { ExternalLink, Github, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+
+// Project images
+import projectLunar from "@/assets/project-lunar.jpg";
+import projectVehicle from "@/assets/project-vehicle.jpg";
+import projectFederated from "@/assets/project-federated.jpg";
+import projectAgri from "@/assets/project-agri.jpg";
 
 const projects = [
   {
@@ -15,6 +21,7 @@ const projects = [
       "Applied deep learning models for spectral analysis and data fusion, implementing custom architectures for handling multi-spectral satellite imagery.",
     outcome: "Achieved higher resolution elemental maps than existing methods, recognized at Inter-IIT.",
     tech: ["PyTorch", "Spectral Analysis", "Remote Sensing", "Data Fusion"],
+    image: projectLunar,
     featured: true,
   },
   {
@@ -27,6 +34,7 @@ const projects = [
       "Implemented sensor fusion using LiDAR, cameras, and IMU. Developed path planning algorithms and integrated ROS-based control systems.",
     outcome: "Successfully demonstrated autonomous navigation in complex environments.",
     tech: ["ROS", "LIDAR", "SLAM", "Carla", "C++", "Python"],
+    image: projectVehicle,
     featured: true,
   },
   {
@@ -39,6 +47,7 @@ const projects = [
       "Developed novel selection algorithms that account for data heterogeneity and communication constraints in distributed learning scenarios.",
     outcome: "Improved model convergence speed and final accuracy in heterogeneous federated settings.",
     tech: ["PyTorch", "Federated Learning", "Distributed Systems", "Python"],
+    image: projectFederated,
     featured: false,
   },
   {
@@ -51,6 +60,7 @@ const projects = [
       "Integrated computer vision for crop detection, developed motion control systems, and implemented autonomous navigation.",
     outcome: "Competed at national level representing IIT (BHU).",
     tech: ["ROS", "OpenCV", "Arduino", "Mechanical Design", "PCB Design"],
+    image: projectAgri,
     featured: false,
   },
 ];
@@ -92,16 +102,21 @@ export function Projects() {
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
                 className="glass-card rounded-3xl overflow-hidden hover-lift group"
               >
-                {/* Gradient Header */}
-                <div className="h-2 bg-gradient-to-r from-primary to-accent" />
-
-                <div className="p-8">
-                  {/* Category Badge */}
-                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                {/* Project Image */}
+                <div className="relative h-48 md:h-56 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+                  <span className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-primary/90 text-primary-foreground text-sm font-medium backdrop-blur-sm">
                     {project.category}
                   </span>
+                </div>
 
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                <div className="p-6 md:p-8">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
                     {project.title}
                   </h3>
 
@@ -175,26 +190,38 @@ export function Projects() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="glass-card rounded-2xl p-6 hover-lift hover-glow"
+                className="glass-card rounded-2xl overflow-hidden hover-lift hover-glow group"
               >
-                <span className="inline-block px-2 py-1 rounded-full bg-accent/10 text-accent text-xs font-medium mb-3">
-                  {project.category}
-                </span>
+                {/* Project Image */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                </div>
 
-                <h3 className="text-lg font-bold text-foreground mb-2">
-                  {project.title}
-                </h3>
+                <div className="p-6">
+                  <span className="inline-block px-2 py-1 rounded-full bg-accent/10 text-accent text-xs font-medium mb-3">
+                    {project.category}
+                  </span>
 
-                <p className="text-sm text-muted-foreground mb-4">
-                  {project.description}
-                </p>
+                  <h3 className="text-lg font-bold text-foreground mb-2">
+                    {project.title}
+                  </h3>
 
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.slice(0, 4).map((tech) => (
-                    <span key={tech} className="text-xs px-2 py-1 rounded bg-muted text-muted-foreground">
-                      {tech}
-                    </span>
-                  ))}
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.slice(0, 4).map((tech) => (
+                      <span key={tech} className="text-xs px-2 py-1 rounded bg-muted text-muted-foreground">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}

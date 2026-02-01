@@ -12,21 +12,21 @@ const achievements = [
   },
   {
     icon: Trophy,
-    stat: "Top 4",
-    label: "Among IITs",
-    description: "Inter-IIT Tech Meet Achievements",
+    stat: "4th",
+    label: "Among 23 IITs",
+    description: "Inter-IIT Tech Meet 13.0 & 14.0",
   },
   {
     icon: Medal,
     stat: "National",
-    label: "Robocon",
-    description: "ABU Robocon Participant",
+    label: "Finalist",
+    description: "Robocon 2025",
   },
   {
     icon: Star,
-    stat: "Multiple",
-    label: "ML Competitions",
-    description: "National Level Rankings",
+    stat: "Amazon",
+    label: "ML Mentee",
+    description: "ML Summer School 2024",
   },
 ];
 
@@ -36,14 +36,28 @@ const leadership = [
     organization: "Science & Technology Council, IIT (BHU)",
     period: "2023 - 2024",
     description:
-      "Leading the technical community of IIT(BHU), organizing hackathons, workshops, and inter-IIT tech events. Mentoring 1000+ students across various technical clubs.",
+      "Led 1000+ multi-domain students, organizing hackathons, workshops, and inter-IIT tech events. Mentoring students across various technical clubs and research projects.",
   },
   {
-    role: "Inter-IIT Tech Lead",
-    organization: "Various Problem Statements",
-    period: "2023 - 2024",
+    role: "Deputy Contingent Leader",
+    organization: "Inter-IIT Tech Meet 14.0",
+    period: "2024",
     description:
-      "Led teams at Inter-IIT Tech Meet for challenging problem statements from organizations like ISRO and DRDO, achieving top positions among participating IITs.",
+      "Led 100+ members at Inter-IIT Tech Meet 14.0; IIT (BHU) ranked 4th overall among all IITs. Coordinated multiple problem statements from ISRO, DRDO, and other organizations.",
+  },
+  {
+    role: "Team Lead - Robocon 2024",
+    organization: "IIT (BHU) Varanasi",
+    period: "2024",
+    description:
+      "Represented IIT(BHU) coordinating different verticals of the team. National Finalist after qualifying Stage 1 and 2, out of 100+ colleges.",
+  },
+  {
+    role: "Technical Coordinator",
+    organization: "Team Averera, IIT (BHU)",
+    period: "2023 - Present",
+    description:
+      "Building SAE Level 5 autonomous vehicle. Working on perception, planning, and control systems using 3D LIDAR and cameras.",
   },
 ];
 

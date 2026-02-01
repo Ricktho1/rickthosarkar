@@ -17,20 +17,20 @@ const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:ricktho.sarkar@iitbhu.ac.in",
-    label: "ricktho.sarkar@iitbhu.ac.in",
+    href: "mailto:ricktho.sarkar.cd.eee22@itbhu.ac.in",
+    label: "ricktho.sarkar.cd.eee22@itbhu.ac.in",
   },
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com",
-    label: "github.com/ricktho",
+    href: "https://github.com/Ricktho1",
+    label: "github.com/Ricktho1",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com",
-    label: "linkedin.com/in/ricktho",
+    href: "https://linkedin.com/in/rickthosarkar",
+    label: "linkedin.com/in/rickthosarkar",
   },
 ];
 

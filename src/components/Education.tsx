@@ -4,14 +4,14 @@ import { useRef } from "react";
 import { GraduationCap, BookOpen } from "lucide-react";
 
 const coursework = [
-  "Deep Learning & Neural Networks",
-  "Computer Vision",
-  "Machine Learning",
-  "Probability & Statistics",
-  "Digital Signal Processing",
-  "Control Systems",
-  "Linear Algebra",
-  "Data Structures & Algorithms",
+  "AI for Programmers (CSO-432)",
+  "Computer Programming (CSO-101)",
+  "Linear Algebra (MA-102)",
+  "Probability & Statistics (MA-202)",
+  "Information Security (CSE-530)",
+  "Numerical Techniques (MA-201)",
+  "ML Course by IIT Guwahati",
+  "Quantum Computing by IIT Roorkee",
 ];
 
 export function Education() {

@@ -11,7 +11,7 @@ const skillCategories = [
       { name: "Computer Vision", level: 90 },
       { name: "Vision-Language Models", level: 85 },
       { name: "Diffusion Models", level: 80 },
-      { name: "Federated Learning", level: 75 },
+      { name: "Natural Language Processing", level: 80 },
     ],
   },
   {
@@ -20,9 +20,9 @@ const skillCategories = [
     skills: [
       { name: "ROS/ROS2", level: 90 },
       { name: "SLAM", level: 85 },
-      { name: "Motion Planning", level: 80 },
+      { name: "Carla/Gazebo Simulation", level: 85 },
       { name: "LiDAR Processing", level: 85 },
-      { name: "Sensor Fusion", level: 80 },
+      { name: "PID Control", level: 80 },
     ],
   },
   {
@@ -30,10 +30,10 @@ const skillCategories = [
     color: "primary",
     skills: [
       { name: "Python", level: 95 },
-      { name: "C++", level: 85 },
-      { name: "JavaScript/React", level: 75 },
-      { name: "FastAPI", level: 80 },
-      { name: "SQL", level: 70 },
+      { name: "C/C++", level: 85 },
+      { name: "TypeScript/ReactJS", level: 80 },
+      { name: "LaTeX", level: 75 },
+      { name: "Java/Dart", level: 70 },
     ],
   },
   {
@@ -42,9 +42,9 @@ const skillCategories = [
     skills: [
       { name: "PyTorch", level: 95 },
       { name: "Detectron2", level: 85 },
-      { name: "Carla/Gazebo", level: 80 },
-      { name: "Docker/Git", level: 85 },
-      { name: "CUDA", level: 75 },
+      { name: "OpenCV", level: 90 },
+      { name: "Git/Unix Shell", level: 85 },
+      { name: "Flutter", level: 70 },
     ],
   },
 ];
@@ -139,19 +139,18 @@ export function Skills() {
             {[
               "LangChain",
               "LangGraph",
-              "Hugging Face",
-              "TensorFlow",
-              "OpenCV",
+              "Transformers",
+              "FastAPI",
+              "MCP",
               "NumPy",
-              "Pandas",
-              "Matplotlib",
-              "Linux",
-              "AWS",
-              "MongoDB",
-              "Redis",
-              "gRPC",
-              "WebSockets",
               "Jupyter",
+              "CUDA",
+              "Unix Shell",
+              "MongoDB",
+              "Jetson Xavier/Nano",
+              "Raspberry Pi",
+              "HTML/CSS",
+              "GD Script",
             ].map((tech) => (
               <span
                 key={tech}

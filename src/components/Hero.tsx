@@ -100,6 +100,14 @@ export function Hero() {
               >
                 <a href="#contact">Contact Me</a>
               </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="rounded-full px-8 border-primary/30 hover:bg-primary/10"
+              >
+                <a href="https://drive.google.com/file/d/1A_C9qNiDxB757loksaqB1rOnrFQ98dYH/view?usp=sharing">Resume</a>
+              </Button>
             </motion.div>
 
             {/* Stats */}

@@ -158,7 +158,7 @@ export function Contact() {
                       Name
                     </label>
                     <Input
-                      name="name"
+                      name="from_name"
                       placeholder="Your name"
                       required
                       className="bg-muted/50 border-border focus:border-primary"
@@ -169,7 +169,7 @@ export function Contact() {
                       Email
                     </label>
                     <Input
-                      name="email"
+                      name="from_email"
                       type="email"
                       placeholder="your@email.com"
                       required

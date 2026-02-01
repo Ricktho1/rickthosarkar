@@ -31,8 +31,9 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 lg:py-32 relative overflow-hidden bg-muted/30">
-      {/* Background */}
+    <section id="about" className="py-20 lg:py-32 relative overflow-hidden bg-background transition-colors duration-300">
+
+    {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10" ref={ref}>

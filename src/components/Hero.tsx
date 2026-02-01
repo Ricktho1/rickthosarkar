@@ -53,7 +53,7 @@ export function Hero() {
             y: 0
           }} transition={{
             delay: 0.3
-          }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary mb-6">
+          }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary mb-8 mt-4">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-sm font-medium">Open to Opportunities</span>
             </motion.div>

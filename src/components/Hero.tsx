@@ -14,7 +14,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 neural-grid opacity-50" />
-      
+
       {/* Floating Orbs */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/20 blur-[100px]"
@@ -33,7 +33,7 @@ export function Hero() {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
-       <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <motion.div
@@ -50,7 +50,7 @@ export function Hero() {
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-sm font-medium">Open to Opportunities</span>
-            </motion.div> */}
+            </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -58,8 +58,7 @@ export function Hero() {
               transition={{ delay: 0.4 }}
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 text-foreground"
             >
-              Hi, I'm{" "}
-              <span className="gradient-text">Ricktho Sarkar</span>
+              Hi, I'm <span className="gradient-text">Ricktho Sarkar</span>
             </motion.h1>
 
             <motion.p
@@ -87,10 +86,19 @@ export function Hero() {
               transition={{ delay: 0.7 }}
               className="flex flex-wrap gap-4 justify-center lg:justify-start mb-12"
             >
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 glow-effect">
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 glow-effect"
+              >
                 <a href="#projects">View Projects</a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-8 border-primary/30 hover:bg-primary/10">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="rounded-full px-8 border-primary/30 hover:bg-primary/10"
+              >
                 <a href="#contact">Contact Me</a>
               </Button>
             </motion.div>
@@ -152,18 +160,14 @@ export function Hero() {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-accent/40 blur-3xl scale-110" />
-              
+
               {/* Image Container */}
               <motion.div
                 className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
-                <img
-                  src={profileImage}
-                  alt="Ricktho Sarkar"
-                  className="w-full h-full object-cover"
-                />
+                <img src={profileImage} alt="Ricktho Sarkar" className="w-full h-full object-cover" />
               </motion.div>
 
               {/* Floating Tech Badge */}

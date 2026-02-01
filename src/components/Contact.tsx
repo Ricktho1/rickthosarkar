@@ -6,6 +6,12 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
+
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = "service_ihwubsv";
+const EMAILJS_TEMPLATE_ID = "template_q81cos9";
+const EMAILJS_PUBLIC_KEY = "kotV9Pg7BiqppZavl";
 
 const socialLinks = [
   {
@@ -30,6 +36,7 @@ const socialLinks = [
 
 export function Contact() {
   const ref = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -37,16 +44,30 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current!,
+        EMAILJS_PUBLIC_KEY
+      );
+      
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      
+      formRef.current?.reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -125,7 +146,7 @@ export function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-8">
+            <form ref={formRef} onSubmit={handleSubmit} className="glass-card rounded-3xl p-8">
               <h3 className="text-xl font-bold text-foreground mb-6">
                 Send a Message
               </h3>

@@ -10,6 +10,7 @@ const experiences = [
     location: "Remote",
     period: "May 2025 - July 2025",
     type: "Industry",
+    number: "01",
     highlights: [
       "Developed Agentic OS building multiple agents and integrating them into LangGraph and LangChain",
       "Implemented and built multiple MCP servers for automating different tasks of the company",
@@ -24,6 +25,7 @@ const experiences = [
     location: "West Bengal, India",
     period: "Nov 2024 - Jan 2025",
     type: "Research",
+    number: "02",
     highlights: [
       "Studied Vision Language Models like CLIP, BLIP, BLIP2 along with their architecture and implementation",
       "Worked on infusing Normalizing Flow and Variational Auto-Encoder in VLMs to improve performance",
@@ -37,6 +39,7 @@ const experiences = [
     location: "South Korea",
     period: "May 2024 - July 2024",
     type: "Research",
+    number: "03",
     highlights: [
       "Comparative study in 2D object detection using YOLOv8 and other YOLO architectures",
       "Implemented BEVFusion research paper by MIT, learning about Swin Transformer",
@@ -52,67 +55,68 @@ export function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-20 lg:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background" />
+    <section id="experience" className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 dot-grid opacity-30" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10" ref={ref}>
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <span className="text-primary font-medium mb-4 block">EXPERIENCE</span>
-          <h2 className="section-title mb-6">
-            Professional <span className="gradient-text">Journey</span>
+          <span className="section-number">03 — Experience</span>
+          <h2 className="section-title mt-4 mb-6">
+            Professional <span className="text-primary">Journey</span>
           </h2>
-          <p className="section-subtitle mx-auto">
+          <p className="section-subtitle">
             From research labs to AI startups, building impactful solutions across the globe.
           </p>
+          <div className="w-24 h-0.5 bg-primary mt-6" />
         </motion.div>
 
-        {/* Timeline */}
-        <div className="max-w-4xl mx-auto relative">
-          {/* Vertical Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
-
+        {/* Experience Cards */}
+        <div className="max-w-4xl mx-auto space-y-6">
           {experiences.map((exp, index) => (
-            <motion.div
+            <motion.article
               key={exp.company}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
-              className={`relative flex flex-col md:flex-row gap-8 mb-12 last:mb-0 ${
-                index % 2 === 0 ? "md:flex-row-reverse" : ""
-              }`}
+              className="paper-card p-6 md:p-8 hover-brutal"
             >
-              {/* Timeline Dot */}
-              <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background md:-translate-x-1/2 z-10" />
+              <div className="flex flex-col md:flex-row md:items-start gap-6">
+                {/* Number */}
+                <div className="hidden md:block font-mono text-5xl font-bold text-primary/20">
+                  {exp.number}
+                </div>
 
-              {/* Content Card */}
-              <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
-                <div className="glass-card rounded-2xl p-6 hover-lift hover-glow">
+                {/* Content */}
+                <div className="flex-1">
                   {/* Header */}
-                  <div className="flex items-start justify-between gap-4 mb-4">
+                  <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                     <div>
-                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-2 ${
+                      <span className={`inline-block px-3 py-1 font-mono text-[10px] uppercase tracking-widest mb-2 ${
                         exp.type === "Research" 
-                          ? "bg-accent/10 text-accent" 
-                          : "bg-primary/10 text-primary"
+                          ? "bg-accent/10 text-accent border border-accent/20" 
+                          : "bg-primary/10 text-primary border border-primary/20"
                       }`}>
                         {exp.type}
                       </span>
-                      <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
+                      <h3 className="font-display text-2xl text-foreground">{exp.title}</h3>
                     </div>
+                    <span className="font-mono text-xs text-muted-foreground md:hidden">{exp.number}</span>
                   </div>
 
                   {/* Company Info */}
-                  <div className="flex flex-col gap-2 mb-4">
-                    <div className="flex items-center gap-2 text-primary">
+                  <div className="flex flex-col gap-2 mb-6">
+                    <div className="flex items-center gap-2 text-primary font-mono text-sm">
                       <Building2 className="w-4 h-4" />
-                      <span className="font-medium">{exp.company}</span>
+                      {exp.company}
                     </div>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                    <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-muted-foreground">
                       <span className="flex items-center gap-1">
                         <MapPin className="w-3 h-3" />
                         {exp.location}
@@ -125,10 +129,10 @@ export function Experience() {
                   </div>
 
                   {/* Highlights */}
-                  <ul className="space-y-2 mb-4">
+                  <ul className="space-y-3 mb-6">
                     {exp.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                      <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <span className="w-1 h-1 rounded-full bg-primary mt-2 shrink-0" />
                         {highlight}
                       </li>
                     ))}
@@ -137,14 +141,14 @@ export function Experience() {
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2">
                     {exp.tech.map((tech) => (
-                      <span key={tech} className="tech-chip text-xs">
+                      <span key={tech} className="tech-chip">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

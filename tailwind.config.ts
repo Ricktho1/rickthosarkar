@@ -14,7 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        display: ['Instrument Serif', 'Georgia', 'serif'],
+        sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'Courier New', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -91,13 +93,9 @@ export default {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0)" },
         },
-        "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 20px hsla(217, 91%, 60%, 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsla(217, 91%, 60%, 0.6)" },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+        "typewriter": {
+          "from": { width: "0" },
+          "to": { width: "100%" },
         },
       },
       animation: {
@@ -107,13 +105,7 @@ export default {
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
         "scale-in": "scale-in 0.3s ease-out",
         "slide-in-right": "slide-in-right 0.3s ease-out",
-        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite",
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-gradient': 'linear-gradient(180deg, hsl(220 30% 8%) 0%, hsl(220 35% 4%) 100%)',
-        'card-gradient': 'linear-gradient(145deg, hsla(217, 91%, 60%, 0.1), hsla(200, 100%, 65%, 0.05))',
+        "typewriter": "typewriter 2s steps(40) forwards",
       },
     },
   },

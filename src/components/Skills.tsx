@@ -5,7 +5,7 @@ import { useRef } from "react";
 const skillCategories = [
   {
     title: "AI & Machine Learning",
-    color: "primary",
+    number: "01",
     skills: [
       { name: "Deep Learning", level: 80 },
       { name: "Computer Vision", level: 90 },
@@ -16,7 +16,7 @@ const skillCategories = [
   },
   {
     title: "Robotics & Autonomy",
-    color: "accent",
+    number: "02",
     skills: [
       { name: "ROS/ROS2", level: 90 },
       { name: "SLAM", level: 85 },
@@ -27,7 +27,7 @@ const skillCategories = [
   },
   {
     title: "Programming",
-    color: "primary",
+    number: "03",
     skills: [
       { name: "Python", level: 95 },
       { name: "C++", level: 85 },
@@ -38,7 +38,7 @@ const skillCategories = [
   },
   {
     title: "Tools & Frameworks",
-    color: "accent",
+    number: "04",
     skills: [
       { name: "PyTorch", level: 95 },
       { name: "Detectron2", level: 85 },
@@ -49,52 +49,64 @@ const skillCategories = [
   },
 ];
 
+const additionalTech = [
+  "LangChain", "LangGraph", "Hugging Face", "TensorFlow", "OpenCV",
+  "NumPy", "Pandas", "Matplotlib", "Linux", "AWS",
+  "MongoDB", "Redis", "gRPC", "WebSockets", "Jupyter",
+];
+
 export function Skills() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="py-20 lg:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background" />
+    <section id="skills" className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 grid-paper opacity-30" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10" ref={ref}>
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <span className="text-primary font-medium mb-4 block">SKILLS</span>
-          <h2 className="section-title mb-6">
-            Technical <span className="gradient-text">Expertise</span>
+          <span className="section-number">07 — Expertise</span>
+          <h2 className="section-title mt-4 mb-6">
+            Technical <span className="text-primary">Skills</span>
           </h2>
-          <p className="section-subtitle mx-auto">
+          <p className="section-subtitle">
             A comprehensive skill set spanning AI, robotics, and software development.
           </p>
+          <div className="w-24 h-0.5 bg-primary mt-6" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Skills Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + categoryIndex * 0.1 }}
-              className="glass-card rounded-2xl p-6 lg:p-8"
+              className="paper-card p-6 lg:p-8"
             >
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
-                <span className={`w-3 h-3 rounded-full ${category.color === "primary" ? "bg-primary" : "bg-accent"}`} />
-                {category.title}
-              </h3>
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="font-display text-xl text-foreground">
+                  {category.title}
+                </h3>
+                <span className="font-mono text-xs text-muted-foreground">{category.number}</span>
+              </div>
 
               <div className="space-y-5">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skill.name}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium text-foreground">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                      <span className="font-mono text-sm text-foreground">{skill.name}</span>
+                      <span className="font-mono text-xs text-muted-foreground">{skill.level}%</span>
                     </div>
-                    <div className="h-2 rounded-full bg-muted overflow-hidden">
+                    <div className="h-1 bg-muted overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={isInView ? { width: `${skill.level}%` } : {}}
@@ -103,11 +115,7 @@ export function Skills() {
                           delay: 0.5 + categoryIndex * 0.1 + skillIndex * 0.05,
                           ease: "easeOut",
                         }}
-                        className={`h-full rounded-full ${
-                          category.color === "primary"
-                            ? "bg-gradient-to-r from-primary to-primary/70"
-                            : "bg-gradient-to-r from-accent to-accent/70"
-                        }`}
+                        className="h-full bg-primary"
                       />
                     </div>
                   </div>
@@ -117,38 +125,27 @@ export function Skills() {
           ))}
         </div>
 
-        {/* Tech Tags Cloud */}
+        {/* Additional Tech Tags */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 text-center"
+          className="mt-12"
         >
-          <h3 className="text-lg font-semibold text-foreground mb-6">Also Experienced With</h3>
-          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-            {[
-              "LangChain",
-              "LangGraph",
-              "Hugging Face",
-              "TensorFlow",
-              "OpenCV",
-              "NumPy",
-              "Pandas",
-              "Matplotlib",
-              "Linux",
-              "AWS",
-              "MongoDB",
-              "Redis",
-              "gRPC",
-              "WebSockets",
-              "Jupyter",
-            ].map((tech) => (
-              <span
+          <h3 className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-6">
+            Also Experienced With
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {additionalTech.map((tech, index) => (
+              <motion.span
                 key={tech}
-                className="px-4 py-2 rounded-full bg-muted text-muted-foreground text-sm hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.3, delay: 0.9 + index * 0.02 }}
+                className="tech-chip"
               >
                 {tech}
-              </span>
+              </motion.span>
             ))}
           </div>
         </motion.div>

@@ -24,7 +24,7 @@ export function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/Ricktho1"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-muted transition-colors"
@@ -33,7 +33,7 @@ export function Footer() {
               <Github className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/rickthosarkar"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-muted transition-colors"
@@ -42,7 +42,7 @@ export function Footer() {
               <Linkedin className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
             </a>
             <a
-              href="mailto:ricktho.sarkar@iitbhu.ac.in"
+              href="mailto:rickthosarkar77@gmail.com"
               className="p-2 rounded-lg hover:bg-muted transition-colors"
               aria-label="Email"
             >

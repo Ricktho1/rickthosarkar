@@ -197,12 +197,12 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator - Hidden on mobile to prevent overlap */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="flex justify-center mt-12 lg:mt-16"
+          className="hidden md:flex justify-center mt-16 lg:mt-20"
         >
           <motion.a
             href="#about"

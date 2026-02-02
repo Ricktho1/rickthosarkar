@@ -7,7 +7,6 @@ const navLinks = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "Memberships", href: "#memberships" },
   { name: "Achievements", href: "#achievements" },
   { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
@@ -19,7 +18,6 @@ export function Navbar() {
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    // Set dark mode by default
     document.documentElement.classList.add("dark");
   }, []);
 
@@ -43,7 +41,7 @@ export function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-lg"
+          ? "bg-background/95 backdrop-blur-sm border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -52,24 +50,25 @@ export function Navbar() {
           {/* Logo */}
           <motion.a
             href="#"
-            className="text-xl lg:text-2xl font-bold gradient-text"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="font-display text-2xl lg:text-3xl text-foreground"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            RS
+            RS<span className="text-primary">.</span>
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1 lg:gap-2">
-            {navLinks.map((link) => (
+          <div className="hidden md:flex items-center gap-1">
+            {navLinks.map((link, index) => (
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="px-3 lg:px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
-                whileHover={{ y: -2 }}
+                className="px-4 py-2 font-mono text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors underline-grow"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * index }}
               >
                 {link.name}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
           </div>
@@ -80,11 +79,14 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-full"
+              className="rounded-none border border-border hover:border-primary"
             >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6">
+            <Button 
+              asChild 
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-mono text-xs uppercase tracking-wider rounded-none px-6"
+            >
               <a href="#contact">Let's Talk</a>
             </Button>
           </div>
@@ -95,16 +97,17 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-full"
+              className="rounded-none"
             >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="rounded-none"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
@@ -117,18 +120,20 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border"
+            className="md:hidden bg-background border-b border-border"
           >
-            <div className="container mx-auto px-4 py-4 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <a
+            <div className="container mx-auto px-4 py-6 flex flex-col gap-1">
+              {navLinks.map((link, index) => (
+                <motion.a
                   key={link.name}
                   href={link.href}
-                  className="px-4 py-3 text-foreground hover:bg-muted rounded-lg transition-colors"
+                  className="px-4 py-3 font-mono text-sm uppercase tracking-wider text-foreground hover:text-primary hover:bg-muted transition-colors"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.05 * index }}
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMobileMenuOpen(false);
-
                     setTimeout(() => {
                       document.querySelector(link.href)?.scrollIntoView({
                         behavior: "smooth",
@@ -137,11 +142,14 @@ export function Navbar() {
                     }, 250);
                   }}
                 >
+                  <span className="text-primary font-mono text-xs mr-3">0{index + 1}</span>
                   {link.name}
-                </a>
-
+                </motion.a>
               ))}
-              <Button asChild className="mt-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">
+              <Button 
+                asChild 
+                className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90 font-mono text-xs uppercase tracking-wider rounded-none"
+              >
                 <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Let's Talk</a>
               </Button>
             </div>

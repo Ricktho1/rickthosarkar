@@ -6,51 +6,59 @@ import { Trophy, Award, Medal, Star, Rocket, Brain, TrendingUp, Target } from "l
 const achievements = [
   {
     icon: Rocket,
-    title: "National Finalist - Robocon 2025",
-    description: "After qualifying Stage 1 and 2, out of 100+ colleges across India",
+    title: "National Finalist — Robocon 2025",
+    description: "Qualified Stage 1 & 2 out of 100+ colleges across India",
     category: "Robotics",
+    number: "01",
   },
   {
     icon: Trophy,
-    title: "4th Rank - Inter-IIT Tech Meet 13.0",
+    title: "4th Rank — Inter-IIT Tech Meet 13.0",
     description: "Among all 23 IITs for ISRO High-Prep Problem Statement",
     category: "Competition",
+    number: "02",
   },
   {
     icon: Medal,
-    title: "3rd Place - Cosmic Classifier",
-    description: "ML event at Cognizance'25, IIT Roorkee, out of 200+ participations",
-    category: "ML Competition",
+    title: "3rd Place — Cosmic Classifier",
+    description: "ML event at Cognizance'25, IIT Roorkee",
+    category: "ML",
+    number: "03",
   },
   {
     icon: Brain,
     title: "Amazon ML Summer School 2024",
-    description: "Selected as Mentee, among top performers in initial evaluation",
-    category: "ML Program",
+    description: "Selected as Mentee among top performers",
+    category: "Program",
+    number: "04",
   },
   {
     icon: Award,
-    title: "Honorable Mention - Flipkart Grid 5.0",
+    title: "Honorable Mention — Flipkart Grid 5.0",
     description: "Top 30 among 100+ participating teams",
     category: "Competition",
+    number: "05",
   },
   {
     icon: Star,
-    title: "Gold Level - WorldQuant Brain",
+    title: "Gold Level — WorldQuant Brain",
     description: "Accomplished by submitting successful alphas",
-    category: "Quantitative Finance",
+    category: "Quant",
+    number: "06",
   },
   {
     icon: Target,
     title: "Robocon 2024 Qualifier",
-    description: "Represented IIT(BHU) in Stage 2 and exhibited bot in Stage 3",
+    description: "Exhibited bot at Stage 3 finals",
     category: "Robotics",
+    number: "07",
   },
   {
     icon: TrendingUp,
-    title: "Top 25% - Summer Analytics 2023",
-    description: "Data Science and Analytics course by IIT Guwahati",
-    category: "Data Science",
+    title: "Top 25% — Summer Analytics 2023",
+    description: "Data Science course by IIT Guwahati",
+    category: "Analytics",
+    number: "08",
   },
 ];
 
@@ -59,40 +67,50 @@ export function Achievements() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="achievements" className="py-20 lg:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background" />
+    <section id="achievements" className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 dot-grid opacity-30" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10" ref={ref}>
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <span className="text-primary font-medium mb-4 block">ACHIEVEMENTS</span>
-          <h2 className="section-title mb-6">
-            Recognition & <span className="gradient-text">Accomplishments</span>
+          <span className="section-number">06 — Recognition</span>
+          <h2 className="section-title mt-4 mb-6">
+            Achievements <span className="text-primary">&</span> Awards
           </h2>
+          <div className="w-24 h-0.5 bg-primary" />
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Achievements Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {achievements.map((item, index) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="glass-card rounded-2xl p-6 hover-lift hover-glow"
+              transition={{ duration: 0.5, delay: 0.1 + index * 0.05 }}
+              className="paper-card p-5 group hover-brutal"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <item.icon className="w-6 h-6 text-primary" />
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-10 h-10 border border-border group-hover:border-primary flex items-center justify-center transition-colors">
+                  <item.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                </div>
+                <span className="font-mono text-xs text-muted-foreground">{item.number}</span>
               </div>
-              <span className="text-xs px-2 py-1 rounded-full bg-accent/10 text-accent font-medium mb-3 inline-block">
+              
+              <span className="font-mono text-[10px] uppercase tracking-widest text-primary mb-2 block">
                 {item.category}
               </span>
-              <h3 className="font-bold text-foreground mb-2 text-sm leading-tight">
+              
+              <h3 className="font-display text-base text-foreground mb-2 leading-tight">
                 {item.title}
               </h3>
+              
               <p className="text-xs text-muted-foreground">{item.description}</p>
             </motion.div>
           ))}

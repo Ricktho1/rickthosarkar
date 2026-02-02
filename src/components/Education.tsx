@@ -19,58 +19,61 @@ export function Education() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 neural-grid opacity-30" />
+    <section className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 grid-paper opacity-30" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10" ref={ref}>
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <span className="text-primary font-medium mb-4 block">EDUCATION</span>
-          <h2 className="section-title">
-            Academic <span className="gradient-text">Foundation</span>
+          <span className="section-number">02.5 — Education</span>
+          <h2 className="section-title mt-4">
+            Academic <span className="text-primary">Foundation</span>
           </h2>
+          <div className="w-24 h-0.5 bg-primary mt-6" />
         </motion.div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-6">
           {/* Main Education Card - IIT BHU */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card rounded-3xl p-8 md:p-12 hover-glow"
+            className="paper-card p-8 md:p-10"
           >
             <div className="flex flex-col md:flex-row md:items-start gap-6">
               {/* Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0">
-                <GraduationCap className="w-8 h-8 text-primary-foreground" />
+              <div className="w-14 h-14 border-2 border-primary flex items-center justify-center shrink-0">
+                <GraduationCap className="w-7 h-7 text-primary" />
               </div>
 
               {/* Content */}
               <div className="flex-1">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground">
+                    <h3 className="font-display text-2xl text-foreground mb-1">
                       B.Tech in Electrical Engineering
                     </h3>
-                    <p className="text-lg text-primary font-medium">
+                    <p className="font-mono text-sm text-primary uppercase tracking-wider">
                       Indian Institute of Technology (BHU) Varanasi
                     </p>
                   </div>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold gradient-text">8.19</div>
-                    <div className="text-sm text-muted-foreground">CGPA</div>
+                  <div className="text-left md:text-right">
+                    <div className="font-mono text-4xl text-primary">8.19</div>
+                    <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">CGPA</div>
                   </div>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-4 mb-6">
-                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-sm">
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <span className="font-mono text-xs text-muted-foreground px-3 py-1 border border-border">
                     Nov 2022 - Oct 2026
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">
+                  <span className="font-mono text-xs text-primary px-3 py-1 border border-primary">
                     Expected Graduation
                   </span>
                 </div>
@@ -78,15 +81,12 @@ export function Education() {
                 {/* Relevant Coursework */}
                 <div>
                   <div className="flex items-center gap-2 mb-4">
-                    <BookOpen className="w-5 h-5 text-primary" />
-                    <span className="font-medium text-foreground">Relevant Coursework</span>
+                    <BookOpen className="w-4 h-4 text-primary" />
+                    <span className="font-mono text-xs uppercase tracking-widest text-foreground">Relevant Coursework</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {coursework.map((course) => (
-                      <span
-                        key={course}
-                        className="tech-chip text-xs"
-                      >
+                      <span key={course} className="tech-chip">
                         {course}
                       </span>
                     ))}
@@ -97,33 +97,31 @@ export function Education() {
           </motion.div>
 
           {/* Secondary Education Cards */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-4">
             {/* Darjeeling Public School */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="glass-card rounded-2xl p-6 hover-glow"
+              className="paper-card p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
-                  <GraduationCap className="w-6 h-6 text-accent" />
+                <div className="w-10 h-10 border border-accent flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-5 h-5 text-accent" />
                 </div>
                 <div className="flex-1">
-                  <div className="flex items-start justify-between gap-2 mb-2">
+                  <div className="flex items-start justify-between gap-2 mb-3">
                     <div>
-                      <h3 className="text-lg font-bold text-foreground">
+                      <h3 className="font-display text-lg text-foreground">
                         CBSE Class XII
                       </h3>
-                      <p className="text-primary font-medium text-sm">
+                      <p className="font-mono text-xs text-primary uppercase tracking-wider">
                         Darjeeling Public School
                       </p>
                     </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold gradient-text">88.4%</div>
-                    </div>
+                    <div className="font-mono text-2xl text-accent">88.4%</div>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-xs">
+                  <span className="font-mono text-[10px] text-muted-foreground">
                     April 2020 - June 2022
                   </span>
                 </div>
@@ -135,27 +133,25 @@ export function Education() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="glass-card rounded-2xl p-6 hover-glow"
+              className="paper-card p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
-                  <GraduationCap className="w-6 h-6 text-accent" />
+                <div className="w-10 h-10 border border-accent flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-5 h-5 text-accent" />
                 </div>
                 <div className="flex-1">
-                  <div className="flex items-start justify-between gap-2 mb-2">
+                  <div className="flex items-start justify-between gap-2 mb-3">
                     <div>
-                      <h3 className="text-lg font-bold text-foreground">
+                      <h3 className="font-display text-lg text-foreground">
                         ICSE Class X
                       </h3>
-                      <p className="text-primary font-medium text-sm">
+                      <p className="font-mono text-xs text-primary uppercase tracking-wider">
                         Don Bosco School, Siliguri
                       </p>
                     </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold gradient-text">96%</div>
-                    </div>
+                    <div className="font-mono text-2xl text-accent">96%</div>
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-xs">
+                  <span className="font-mono text-[10px] text-muted-foreground">
                     April 2020
                   </span>
                 </div>

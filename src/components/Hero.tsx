@@ -141,17 +141,12 @@ export function Hero() {
               {/* Image Frame - Brutalist offset border */}
               <div className="relative">
                 <div className="absolute inset-0 border-2 border-primary translate-x-4 translate-y-4" />
-                <div className="relative w-64 h-72 md:w-72 md:h-80 lg:w-80 lg:h-96 overflow-hidden border-2 border-foreground">
+              <div className="relative w-64 h-72 md:w-72 md:h-80 lg:w-80 lg:h-96 overflow-hidden border-2 border-foreground">
                   <img 
                     src={profileImage} 
                     alt="Ricktho Sarkar" 
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   />
-                </div>
-                
-                {/* Figure Label */}
-                <div className="absolute -bottom-6 left-0 figure-label">
-                  Fig. 01 — Portrait
                 </div>
               </div>
             </motion.div>

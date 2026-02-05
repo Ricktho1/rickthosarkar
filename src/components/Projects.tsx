@@ -94,8 +94,7 @@ export function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="section-number">04 — Research & Projects</span>
-          <h2 className="section-title mt-4 mb-6">
+          <h2 className="section-title mb-6">
             Featured <span className="text-primary">Work</span>
           </h2>
           <p className="section-subtitle">

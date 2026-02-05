@@ -47,8 +47,7 @@ export function About() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="section-number">02 — About</span>
-          <h2 className="section-title mt-4 mb-6">
+          <h2 className="section-title mb-6">
             Building <span className="text-primary">Intelligent</span> Systems
           </h2>
           <div className="w-24 h-0.5 bg-primary" />

@@ -5,46 +5,42 @@ import { useRef } from "react";
 const skillCategories = [
   {
     title: "AI & Machine Learning",
-    number: "01",
     skills: [
-      { name: "Deep Learning", level: 80 },
-      { name: "Computer Vision", level: 90 },
-      { name: "Vision-Language Models", level: 85 },
-      { name: "Diffusion Models", level: 80 },
-      { name: "Federated Learning", level: 75 },
+      { name: "Deep Learning", level: "Expert" },
+      { name: "Computer Vision", level: "Expert" },
+      { name: "Vision-Language Models", level: "Advanced" },
+      { name: "Diffusion Models", level: "Advanced" },
+      { name: "Federated Learning", level: "Intermediate" },
     ],
   },
   {
     title: "Robotics & Autonomy",
-    number: "02",
     skills: [
-      { name: "ROS/ROS2", level: 90 },
-      { name: "SLAM", level: 85 },
-      { name: "Motion Planning", level: 80 },
-      { name: "LiDAR Processing", level: 85 },
-      { name: "Sensor Fusion", level: 80 },
+      { name: "ROS/ROS2", level: "Expert" },
+      { name: "SLAM", level: "Advanced" },
+      { name: "Motion Planning", level: "Advanced" },
+      { name: "LiDAR Processing", level: "Advanced" },
+      { name: "Sensor Fusion", level: "Advanced" },
     ],
   },
   {
     title: "Programming",
-    number: "03",
     skills: [
-      { name: "Python", level: 95 },
-      { name: "C++", level: 85 },
-      { name: "JavaScript/React", level: 30 },
-      { name: "FastAPI", level: 80 },
-      { name: "SQL", level: 60 },
+      { name: "Python", level: "Expert" },
+      { name: "C++", level: "Advanced" },
+      { name: "JavaScript/React", level: "Basic" },
+      { name: "FastAPI", level: "Advanced" },
+      { name: "SQL", level: "Intermediate" },
     ],
   },
   {
     title: "Tools & Frameworks",
-    number: "04",
     skills: [
-      { name: "PyTorch", level: 95 },
-      { name: "Detectron2", level: 85 },
-      { name: "Carla/Gazebo", level: 75 },
-      { name: "Docker/Git", level: 85 },
-      { name: "CUDA", level: 60 },
+      { name: "PyTorch", level: "Expert" },
+      { name: "Detectron2", level: "Advanced" },
+      { name: "Carla/Gazebo", level: "Intermediate" },
+      { name: "Docker/Git", level: "Advanced" },
+      { name: "CUDA", level: "Intermediate" },
     ],
   },
 ];
@@ -54,6 +50,32 @@ const additionalTech = [
   "NumPy", "Pandas", "Matplotlib", "Linux", "AWS",
   "MongoDB", "Redis", "gRPC", "WebSockets", "Jupyter",
 ];
+
+const getLevelStyle = (level: string) => {
+  switch (level) {
+    case "Expert":
+      return "bg-primary text-primary-foreground border-primary";
+    case "Advanced":
+      return "bg-accent text-accent-foreground border-accent";
+    case "Intermediate":
+      return "bg-muted text-foreground border-border";
+    default:
+      return "bg-background text-muted-foreground border-border";
+  }
+};
+
+const getLevelDots = (level: string) => {
+  switch (level) {
+    case "Expert":
+      return 4;
+    case "Advanced":
+      return 3;
+    case "Intermediate":
+      return 2;
+    default:
+      return 1;
+  }
+};
 
 export function Skills() {
   const ref = useRef(null);
@@ -72,8 +94,7 @@ export function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="section-number">07 — Expertise</span>
-          <h2 className="section-title mt-4 mb-6">
+          <h2 className="section-title mb-6">
             Technical <span className="text-primary">Skills</span>
           </h2>
           <p className="section-subtitle">
@@ -82,7 +103,7 @@ export function Skills() {
           <div className="w-24 h-0.5 bg-primary mt-6" />
         </motion.div>
 
-        {/* Skills Grid */}
+        {/* Skills Grid - Card Layout with Dot Indicators */}
         <div className="grid md:grid-cols-2 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
@@ -92,38 +113,88 @@ export function Skills() {
               transition={{ duration: 0.6, delay: 0.2 + categoryIndex * 0.1 }}
               className="paper-card p-6 lg:p-8"
             >
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-display text-xl text-foreground">
-                  {category.title}
-                </h3>
-                <span className="font-mono text-xs text-muted-foreground">{category.number}</span>
-              </div>
+              <h3 className="font-display text-xl text-foreground mb-6 pb-4 border-b border-border">
+                {category.title}
+              </h3>
 
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-mono text-sm text-foreground">{skill.name}</span>
-                      <span className="font-mono text-xs text-muted-foreground">{skill.level}%</span>
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.4 + categoryIndex * 0.1 + skillIndex * 0.05,
+                    }}
+                    className="flex items-center justify-between group"
+                  >
+                    <span className="font-mono text-sm text-foreground group-hover:text-primary transition-colors">
+                      {skill.name}
+                    </span>
+                    
+                    <div className="flex items-center gap-3">
+                      {/* Dot Indicators */}
+                      <div className="flex gap-1.5">
+                        {[1, 2, 3, 4].map((dot) => (
+                          <motion.div
+                            key={dot}
+                            initial={{ scale: 0 }}
+                            animate={isInView ? { scale: 1 } : {}}
+                            transition={{
+                              duration: 0.3,
+                              delay: 0.6 + categoryIndex * 0.1 + skillIndex * 0.05 + dot * 0.05,
+                            }}
+                            className={`w-2.5 h-2.5 rounded-full border ${
+                              dot <= getLevelDots(skill.level)
+                                ? "bg-primary border-primary"
+                                : "bg-transparent border-muted-foreground/30"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                      
+                      {/* Level Badge */}
+                      <span
+                        className={`px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider border ${getLevelStyle(
+                          skill.level
+                        )}`}
+                      >
+                        {skill.level}
+                      </span>
                     </div>
-                    <div className="h-1 bg-muted overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={isInView ? { width: `${skill.level}%` } : {}}
-                        transition={{
-                          duration: 1,
-                          delay: 0.5 + categoryIndex * 0.1 + skillIndex * 0.05,
-                          ease: "easeOut",
-                        }}
-                        className="h-full bg-primary"
-                      />
-                    </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Legend */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="mt-8 flex flex-wrap justify-center gap-6"
+        >
+          {["Expert", "Advanced", "Intermediate", "Basic"].map((level) => (
+            <div key={level} className="flex items-center gap-2">
+              <div className="flex gap-1">
+                {[1, 2, 3, 4].map((dot) => (
+                  <div
+                    key={dot}
+                    className={`w-2 h-2 rounded-full border ${
+                      dot <= getLevelDots(level)
+                        ? "bg-primary border-primary"
+                        : "bg-transparent border-muted-foreground/30"
+                    }`}
+                  />
+                ))}
+              </div>
+              <span className="font-mono text-xs text-muted-foreground">{level}</span>
+            </div>
+          ))}
+        </motion.div>
 
         {/* Additional Tech Tags */}
         <motion.div

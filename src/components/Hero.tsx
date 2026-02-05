@@ -31,16 +31,6 @@ export function Hero() {
           
           {/* Left Column - Main Content */}
           <div className="lg:col-span-7 order-2 lg:order-1">
-            {/* Section Number */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="mb-6"
-            >
-              <span className="section-number">01 — Introduction</span>
-            </motion.div>
-
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}

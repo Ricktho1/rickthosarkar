@@ -24,9 +24,9 @@
     --popover: 40 25% 98%;
     --popover-foreground: 30 10% 12%;
 
-    /* Electric Chartreuse - Unexpected accent */
-    --primary: 72 100% 45%;
-    --primary-foreground: 30 10% 8%;
+    /* Deep Teal - High contrast accent for light mode */
+    --primary: 175 84% 32%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 35 20% 90%;
     --secondary-foreground: 30 10% 15%;

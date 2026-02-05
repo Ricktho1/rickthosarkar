@@ -41,8 +41,7 @@ export function Extracurriculars() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="section-number">07.5 — Beyond Academics</span>
-          <h2 className="section-title mt-4 mb-6">
+          <h2 className="section-title mb-6">
             Extracurricular <span className="text-primary">Interests</span>
           </h2>
           <p className="section-subtitle mx-auto">

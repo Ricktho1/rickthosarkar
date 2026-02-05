@@ -83,8 +83,7 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="section-number">08 — Contact</span>
-          <h2 className="section-title mt-4 mb-6">
+          <h2 className="section-title mb-6">
             Let's <span className="text-primary">Connect</span>
           </h2>
           <p className="section-subtitle">

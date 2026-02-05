@@ -119,8 +119,7 @@ export function Memberships() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="section-number">05 — Leadership</span>
-          <h2 className="section-title mt-4 mb-6">
+          <h2 className="section-title mb-6">
             Positions of <span className="text-primary">Responsibility</span>
           </h2>
           <div className="w-24 h-0.5 bg-primary" />

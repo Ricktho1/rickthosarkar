@@ -31,11 +31,10 @@ export function Education() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="section-number">02.5 — Education</span>
-          <h2 className="section-title mt-4">
+          <h2 className="section-title mb-6">
             Academic <span className="text-primary">Foundation</span>
           </h2>
-          <div className="w-24 h-0.5 bg-primary mt-6" />
+          <div className="w-24 h-0.5 bg-primary" />
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-6">

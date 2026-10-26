@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://rickthosarkar.in
+**URL**: https://rickthosarkar.netlify.app/
 
 ## How can I edit this code?
 

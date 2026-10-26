@@ -5,85 +5,21 @@ import { Users, Flag, Cog, Bot, Car, Globe, Handshake, Code, Calendar, Trophy, W
 import { Button } from "./ui/button";
 
 const highlightedRoles = [
-  {
-    icon: Users,
-    role: "Joint General Secretary",
-    organization: "Science & Technology Council, IIT BHU Varanasi",
-    period: "Apr 2025 - Present",
-    description: "Full-time leadership role overseeing technical activities and initiatives across the institute.",
-  },
-  {
-    icon: Flag,
-    role: "Deputy Contingent Leader",
-    organization: "Inter IIT Tech Meet 14.0",
-    period: "Sep 2025 - Dec 2025",
-    description: "Led and coordinated a 90+ member contingent spanning AI/ML, Robotics, VLSI, Systems, Web, and Core Engineering.",
-  },
-  {
-    icon: Globe,
-    role: "Under Secretary General",
-    organization: "IIT BHU Model United Nations",
-    period: "Jun 2023 - Jul 2024",
-    description: "Organized 12th edition of IITBHU MUN with 200+ attendees.",
-  },
-  {
-    icon: Handshake,
-    role: "Student Liaison",
-    organization: "Y20 India 2023 (G20 Summit)",
-    period: "Aug 2023",
-    description: "Facilitated introduction of college facilities to foreign nationals and Y20 G20 summit participants.",
-  },
+  { icon: Users, role: "Joint General Secretary", organization: "Science & Technology Council, IIT (BHU)", period: "Jul 2025 – Jul 2026",
+    description: "Selected through elections and interviews for the highest student-led position described in the resume. Represented 5,000+ students across technical disciplines and led 100+ events. Hosted Technex 2026, one of Asia’s oldest technical festivals, with a 500+ member team and 2,000+ attendees. Represented student needs and resource requests in Dean and Director meetings." },
+  { icon: Flag, role: "Deputy Contingent Leader", organization: "Inter-IIT Tech Meet 14.0 · IIT (BHU)", period: "Sep 2025 – Mar 2026",
+    description: "Led a contingent of 100+ students representing IIT (BHU), contributing to 4th place overall. Arranged travel, accommodation and resources from preparation through the end of the event." },
+  { icon: Globe, role: "Under Secretary General", organization: "IIT (BHU) Model United Nations", period: "Jun 2023 – Jul 2024",
+    description: "Helped organise the 12th edition for 500+ delegates with a 36-member team. Coordinated conference activities, delegate and speaker hospitality, food, accommodation, planning and event execution." },
+  { icon: Handshake, role: "Student Liaison Officer", organization: "Y20-G20 Summit · Varanasi, India", period: "1 Aug 2023 – 30 Aug 2023",
+    description: "Supported hospitality and coordination for international youth delegates. Assisted cross-cultural communication and delegate-facing arrangements, representing the institute and India and contributing to a welcoming, well-organised summit." },
 ];
 
 const otherRoles = [
-  {
-    icon: Bot,
-    role: "Senior Advisor",
-    organization: "Robotics Club, IIT (BHU) Varanasi",
-    period: "Apr 2025 - Present",
-  },
-  {
-    icon: Cog,
-    role: "Technical Lead - RoboREG",
-    organization: "Robotics Club, IIT (BHU) Varanasi",
-    period: "Jul 2024 - Apr 2025",
-  },
-  {
-    icon: Bot,
-    role: "Core Team Member & Team Lead",
-    organization: "Robocon 2024, IIT (BHU)",
-    period: "Nov 2023 - Jul 2024",
-  },
-  {
-    icon: Car,
-    role: "Technical Coordinator - Autonomy",
-    organization: "Team AVERERA, IIT BHU",
-    period: "Sep 2023 - Jul 2024",
-  },
-  {
-    icon: Trophy,
-    role: "Contingent Member - ISRO",
-    organization: "Inter IIT Tech Meet 13.0",
-    period: "Oct 2024 - Dec 2024",
-  },
-  {
-    icon: Wrench,
-    role: "Event Manager - Robowars",
-    organization: "Technex 2025, IIT (BHU)",
-    period: "Jan 2025 - Apr 2025",
-  },
-  {
-    icon: Code,
-    role: "Software Development Group",
-    organization: "Club of Programmers, IIT BHU",
-    period: "May 2023 - Apr 2025",
-  },
-  {
-    icon: Calendar,
-    role: "Conference Coordinator",
-    organization: "IIT BHU Model United Nations",
-    period: "Jan 2023 - Jun 2023",
-  },
+  { icon: Wrench, role: "Event Manager — Robowars", organization: "Technex 2025, IIT (BHU)", period: "Dec 2024 – Apr 2025",
+    description: "Managed logistics and hospitality for 100+ participants. Oversaw a standardised 16 ft × 16 ft × 8 ft arena, infrastructure and finances, while maintaining team safety and food requirements." },
+  { icon: Bot, role: "Founder and Team Leader", organization: "IIT (BHU) Robocon Team, 2024", period: "Jan 2024 – Apr 2024",
+    description: "Founded and led the institute’s first 15-member multi-domain team at National DD Robocon 2024. Secured necessary resources and supported the team’s continuity for future years." },
 ];
 
 export function Memberships() {
@@ -154,6 +90,7 @@ export function Memberships() {
         >
           <Button
             variant="ghost"
+            aria-expanded={showOtherRoles}
             onClick={() => setShowOtherRoles(!showOtherRoles)}
             className="w-full flex items-center justify-between p-4 border border-border hover:border-primary transition-colors mb-4"
           >
@@ -172,7 +109,7 @@ export function Memberships() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
+              className="grid sm:grid-cols-2 gap-4"
             >
               {otherRoles.map((item, index) => (
                 <motion.div
@@ -187,14 +124,15 @@ export function Memberships() {
                       <item.icon className="w-4 h-4 text-muted-foreground" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-display text-sm text-foreground leading-tight truncate">
+                      <h4 className="font-display text-sm text-foreground leading-tight">
                         {item.role}
                       </h4>
                     </div>
                   </div>
-                  <p className="font-mono text-[10px] text-primary uppercase tracking-wider mb-2 line-clamp-2">
+                  <p className="font-mono text-[10px] text-primary uppercase tracking-wider mb-2">
                     {item.organization}
                   </p>
+                  <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
                   <span className="font-mono text-[10px] text-muted-foreground">
                     {item.period}
                   </span>

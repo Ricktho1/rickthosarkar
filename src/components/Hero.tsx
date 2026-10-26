@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import profileImage from "@/assets/profile.jpg";
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 
-const stats = [
+export const stats = [
   { value: "4", label: "Projects" },
   { value: "3", label: "Internships" },
   { value: "5,000+", label: "Students Represented" },

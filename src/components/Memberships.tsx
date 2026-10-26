@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { Users, Flag, Cog, Bot, Car, Globe, Handshake, Code, Calendar, Trophy, Wrench, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "./ui/button";
 
-const highlightedRoles = [
+export const highlightedRoles = [
   { icon: Users, role: "Joint General Secretary", organization: "Science & Technology Council, IIT (BHU)", period: "Jul 2025 – Jul 2026",
     description: "Selected through elections and interviews for the highest student-led position described in the resume. Represented 5,000+ students across technical disciplines and led 100+ events. Hosted Technex 2026, one of Asia’s oldest technical festivals, with a 500+ member team and 2,000+ attendees. Represented student needs and resource requests in Dean and Director meetings." },
   { icon: Flag, role: "Deputy Contingent Leader", organization: "Inter-IIT Tech Meet 14.0 · IIT (BHU)", period: "Sep 2025 – Mar 2026",

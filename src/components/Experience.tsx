@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Building2, MapPin, Calendar } from "lucide-react";
 
-const experiences = [
+export const experiences = [
   {
     title: "AI Intern", company: "Field Genie / IOT++ / MultipliedAI", location: "Remote",
     period: "12 May 2025 – 14 Jul 2025", type: "Industry", number: "01",

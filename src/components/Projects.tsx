@@ -9,7 +9,7 @@ import projectVehicle from "@/assets/project-vehicle.jpg";
 import projectPackage from "@/assets/project-package.jpg";
 import projectAgri from "@/assets/project-agri.jpg";
 
-const projects = [
+export const projects = [
   {
     title: "High-Resolution Elemental Mapping of the Moon’s Surface", category: "Space Science / AI",
     organization: "ISRO / Inter-IIT Tech Meet 13.0", period: "Sep 2024 – Jan 2025",

@@ -1,0 +1,3 @@
+- [ ] Update education, profile, experience, projects, leadership, achievements and skills from the uploaded resume.
+- [ ] Add the research paper and link the exact uploaded PDF.
+- [ ] Verify portfolio content, expandable details and PDF access.

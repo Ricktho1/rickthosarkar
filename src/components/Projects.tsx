@@ -6,73 +6,41 @@ import { Button } from "./ui/button";
 
 import projectLunar from "@/assets/project-lunar.jpg";
 import projectVehicle from "@/assets/project-vehicle.jpg";
-import projectFederated from "@/assets/project-federated.jpg";
+import projectPackage from "@/assets/project-package.jpg";
 import projectAgri from "@/assets/project-agri.jpg";
 
 const projects = [
   {
-    title: "High-Resolution Elemental Mapping of the Moon",
-    category: "Space Science / AI",
-    organization: "ISRO / Inter-IIT Tech Meet 13.0",
-    description:
-      "Developed a method to analyze XRF data from Chandrayaan-2's CLASS for elemental mapping of the Moon's surface.",
-    details: [
-      "Analyzed astronomical Time Series Data in FITS format with XSPEC in Unix-based kernel",
-      "Applied image processing techniques like DCT and Drizzle to increase spatial resolution",
-      "Worked with raw spectral data to extract elemental abundances across lunar regions",
-    ],
-    outcome: "Ranked 4th among all 23 IITs in Inter-IIT Tech Meet 13.0",
-    tech: ["Python", "GoLang", "XSPEC", "Time Series", "DCT", "Drizzle"],
-    image: projectLunar,
-    number: "01",
+    title: "High-Resolution Elemental Mapping of the Moon’s Surface", category: "Space Science / AI",
+    organization: "ISRO / Inter-IIT Tech Meet 13.0", period: "Sep 2024 – Jan 2025",
+    description: "Developed a method to analyze XRF data from Chandrayaan-2’s CLASS for elemental mapping of the Moon.",
+    details: ["Analyzed astronomical time-series data in FITS format using XSPEC in a Unix-based kernel.", "Applied DCT and Drizzle image processing to structured data to increase spatial resolution."],
+    outcome: "Ranked 4th among all 23 IITs for the ISRO High-Prep Problem Statement at Inter-IIT Tech Meet 13.0.",
+    tech: ["XRF", "FITS", "XSPEC", "Unix", "DCT", "Drizzle"], image: projectLunar, number: "01",
   },
   {
-    title: "Autonomous Vehicle System",
-    category: "Robotics / Autonomy",
-    organization: "Team Averera, IIT (BHU)",
-    description:
-      "Building SAE Level 3 Autonomous Vehicle using 3D LIDAR and Cameras for navigation.",
-    details: [
-      "Implementing HDL graph SLAM with Pure Pursuit for autonomous navigation",
-      "Applied CNN-based segmentation and trajectory planning with real-time inference",
-      "Integrated sensor fusion with LiDAR, cameras, and IMU for robust perception",
-    ],
-    outcome: "Demonstrated autonomous navigation on Jetson Xavier",
-    tech: ["ROS", "Carla", "SLAM", "Jetson Xavier", "3D Detection"],
-    image: projectVehicle,
-    number: "02",
+    title: "Autonomous Vehicle", category: "Robotics / Autonomy",
+    organization: "Technical Coordinator · Team Averera, IIT (BHU)", period: "Sep 2023 – Jul 2024",
+    description: "Worked on an SAE Level 3 autonomous vehicle using 3D LiDAR and cameras for navigation.",
+    details: ["Worked towards applying HDL graph SLAM and the Pure Pursuit package for autonomous navigation.", "Applied CNN-based segmentation and trajectory planning, validated in hardware with real-time inference."],
+    outcome: "Validated CNN-based segmentation and trajectory planning in hardware with real-time inference.",
+    tech: ["3D LiDAR", "Cameras", "HDL Graph SLAM", "Pure Pursuit", "CNN"], image: projectVehicle, number: "02",
   },
   {
-    title: "Federated Learning Client Selection",
-    category: "ML Research",
-    organization: "DRDO Research Project, IIT(BHU)",
-    description:
-      "Developed a client selection framework leveraging reinforcement learning for federated environments.",
-    details: [
-      "Optimized outcomes by tuning privacy budget with novel drone-client parameters",
-      "Addressed challenges of non-IID data distribution in distributed learning",
-      "Implemented differential privacy mechanisms for data security",
-    ],
-    outcome: "Improved model convergence with differential privacy",
-    tech: ["Differential Privacy", "Federated Learning", "RL", "PyTorch"],
-    image: projectFederated,
-    number: "03",
+    title: "Agricultural Manual & Autonomous Bots", category: "Robotics",
+    organization: "Team Robocon 2024, IIT (BHU)", period: "Dec 2024 – Apr 2025",
+    description: "Developed manual and autonomous bots to pick seedlings, paddy rice and empty grain in designated areas.",
+    details: ["Simulated and implemented in Gazebo ROS with 2D LiDAR, IMU, cameras and motors using PID control.", "Used Jetson Nano and Raspberry Pi with existing Tele-operations and SLAM packages."],
+    outcome: "Qualified Stage 1 of Robocon 2024, represented IIT (BHU) in Stage 2 and exhibited the bot in Stage 3.",
+    tech: ["Gazebo", "ROS", "2D LiDAR", "IMU", "PID", "Jetson Nano", "Raspberry Pi", "SLAM"], image: projectAgri, number: "03",
   },
   {
-    title: "Agricultural Autonomous Robot",
-    category: "Robotics",
-    organization: "ABU Robocon 2024, IIT(BHU)",
-    description:
-      "Developed autonomous bots for agricultural tasks including seedling and paddy handling.",
-    details: [
-      "Simulated in Gazebo ROS using 2D LIDAR, IMU, cameras with PID control",
-      "Utilized Jetson Nano and Raspberry Pi with SLAM and Tele-operations",
-      "Integrated computer vision for crop detection and localization",
-    ],
-    outcome: "Qualified Stage 1 of National Robocon 2024",
-    tech: ["Gazebo", "ROS", "Segmentation", "PID", "Jetson Nano"],
-    image: projectAgri,
-    number: "04",
+    title: "Autonomous Robotic Bot for Package Control", category: "Robotics / Manipulation",
+    organization: "Flipkart Grid 5.0", period: "Sep 2023 – Nov 2023",
+    description: "Developed an autonomous robotic arm for identifying and manipulating packages in warehouses.",
+    details: ["Implemented a core-XY mechanism and inverse kinematics using Arduino and stepper motors.", "Used YOLOv5 to detect packages with custom datasets from Roboflow."],
+    outcome: "Built a package-identification and manipulation system combining visual detection and robotic control.",
+    tech: ["Core-XY", "Inverse Kinematics", "Arduino", "Stepper Motors", "YOLOv5", "Roboflow"], image: projectPackage, number: "04",
   },
 ];
 
@@ -117,7 +85,8 @@ export function Projects() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} — illustrative visualization`}
+                  loading="lazy"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
@@ -146,6 +115,7 @@ export function Projects() {
                   {project.description}
                 </p>
 
+                <p className="font-mono text-xs text-muted-foreground mb-4">{project.period}</p>
                 {/* Expandable Details */}
                 {expandedProject === project.title && (
                   <motion.div
@@ -200,7 +170,7 @@ export function Projects() {
                     )
                   }
                 >
-                  {expandedProject === project.title ? "Show Less" : "Read More"}
+                  {expandedProject === project.title ? "Show Less" : "Learn More"}
                   {expandedProject === project.title ? (
                     <ChevronDown className="w-4 h-4 ml-2" />
                   ) : (

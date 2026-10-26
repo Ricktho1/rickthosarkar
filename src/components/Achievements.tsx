@@ -4,62 +4,11 @@ import { useRef } from "react";
 import { Trophy, Award, Medal, Star, Rocket, Brain, TrendingUp, Target } from "lucide-react";
 
 const achievements = [
-  {
-    icon: Rocket,
-    title: "National Finalist — Robocon 2025",
-    description: "Qualified Stage 1 & 2 out of 100+ colleges across India",
-    category: "Robotics",
-    number: "01",
-  },
-  {
-    icon: Trophy,
-    title: "4th Rank — Inter-IIT Tech Meet 13.0",
-    description: "Among all 23 IITs for ISRO High-Prep Problem Statement",
-    category: "Competition",
-    number: "02",
-  },
-  {
-    icon: Medal,
-    title: "3rd Place — Cosmic Classifier",
-    description: "ML event at Cognizance'25, IIT Roorkee",
-    category: "ML",
-    number: "03",
-  },
-  {
-    icon: Brain,
-    title: "Amazon ML Summer School 2024",
-    description: "Selected as Mentee among top performers",
-    category: "Program",
-    number: "04",
-  },
-  {
-    icon: Award,
-    title: "Honorable Mention — Flipkart Grid 5.0",
-    description: "Top 30 among 100+ participating teams",
-    category: "Competition",
-    number: "05",
-  },
-  {
-    icon: Star,
-    title: "Gold Level — WorldQuant Brain",
-    description: "Accomplished by submitting successful alphas",
-    category: "Quant",
-    number: "06",
-  },
-  {
-    icon: Target,
-    title: "Robocon 2024 Qualifier",
-    description: "Exhibited bot at Stage 3 finals",
-    category: "Robotics",
-    number: "07",
-  },
-  {
-    icon: TrendingUp,
-    title: "Top 25% — Summer Analytics 2023",
-    description: "Data Science course by IIT Guwahati",
-    category: "Analytics",
-    number: "08",
-  },
+  { icon: Medal, title: "3rd Place — Cosmic Classifier", description: "ML event at Cognizance 2025, IIT Roorkee, among 200+ participants.", category: "ML", number: "01" },
+  { icon: Trophy, title: "4th Rank — Inter-IIT Tech Meet 13.0", description: "Among all 23 IITs for the ISRO High-Prep Problem Statement.", category: "Competition", number: "02" },
+  { icon: Brain, title: "Amazon ML Summer School 2024", description: "Selected as a mentee among the top performers in the initial open evaluation.", category: "Program", number: "03" },
+  { icon: Target, title: "Robocon 2024 Qualifier", description: "Qualified Stage 1, represented IIT (BHU) in Stage 2 and exhibited the bot in Stage 3.", category: "Robotics", number: "04" },
+  { icon: Star, title: "Gold Level — WorldQuant Brain", description: "Achieved Gold Level by submitting alphas.", category: "Quant", number: "05" },
 ];
 
 export function Achievements() {

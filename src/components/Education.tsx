@@ -4,14 +4,15 @@ import { useRef } from "react";
 import { GraduationCap, BookOpen } from "lucide-react";
 
 const coursework = [
-  "AI for Programmers (CSO-432)",
-  "Computer Programming (CSO-101)",
-  "Linear Algebra (MA-102)",
-  "Probability & Statistics (MA-202)",
-  "Information Security (CSE-530)",
-  "Numerical Techniques (MA-201)",
-  "ML Course by IIT Guwahati",
-  "Quantum Computing by IIT Roorkee",
+  "Linear Algebra and Derivatives (MA-102)", "AI for Programmers (CSO-432)",
+  "Computer Programming (CSO-101)", "Probability and Statistics (MA-202)",
+  "Information Security (CSE-530)", "Numerical Techniques (MA-201)",
+  "Academic Writing for Science and Technology (LLG-309)",
+  "8-week Machine Learning Course — AI Club, IIT Guwahati",
+  "Summer Analytics 2023 — Consulting and Analytics Club, IIT Guwahati",
+  "Quantum Computing with Qsim — IIT Roorkee and C-DAC Hyderabad",
+  "Time Series Analysis — Consulting and Analytics Club, IIT Guwahati",
+  "Introductory Options with Hands-on Programming — Finance and Economics Club, IIT Guwahati",
 ];
 
 export function Education() {
@@ -38,6 +39,19 @@ export function Education() {
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-6">
+          <motion.article initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} className="paper-card p-8 md:p-10 border-l-4 border-l-primary">
+            <div className="flex items-start gap-6">
+              <GraduationCap className="w-7 h-7 text-primary shrink-0" />
+              <div className="min-w-0">
+                <h3 className="font-display text-2xl mb-2">MSc in Robotics and Artificial Intelligence</h3>
+                <p className="font-mono text-sm text-primary mb-4">University College London (UCL)</p>
+                <div className="flex flex-wrap gap-3 font-mono text-xs">
+                  <span className="border border-border px-3 py-1 text-muted-foreground">Sep 2026 – Sep 2027</span>
+                  <span className="border border-primary px-3 py-1 text-primary">Currently Ongoing</span>
+                </div>
+              </div>
+            </div>
+          </motion.article>
           {/* Main Education Card - IIT BHU */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -63,17 +77,17 @@ export function Education() {
                     </p>
                   </div>
                   <div className="text-left md:text-right">
-                    <div className="font-mono text-4xl text-primary">8.19</div>
+                    <div className="font-mono text-4xl text-primary">8.21</div>
                     <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">CGPA</div>
                   </div>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3 mb-6">
                   <span className="font-mono text-xs text-muted-foreground px-3 py-1 border border-border">
-                    Nov 2022 - Oct 2026
+                    Nov 2022 - Jul 2026
                   </span>
                   <span className="font-mono text-xs text-primary px-3 py-1 border border-primary">
-                    Expected Graduation
+                    Graduated
                   </span>
                 </div>
 
@@ -115,7 +129,7 @@ export function Education() {
                         CBSE Class XII
                       </h3>
                       <p className="font-mono text-xs text-primary uppercase tracking-wider">
-                        Darjeeling Public School
+                        Darjeeling Public School, Siliguri
                       </p>
                     </div>
                     <div className="font-mono text-2xl text-accent">88.4%</div>
@@ -151,7 +165,7 @@ export function Education() {
                     <div className="font-mono text-2xl text-accent">96%</div>
                   </div>
                   <span className="font-mono text-[10px] text-muted-foreground">
-                    April 2020
+                    Apr 2010 - Apr 2020
                   </span>
                 </div>
               </div>

@@ -3,50 +3,30 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Building2, MapPin, Calendar } from "lucide-react";
 
-const experiences = [
+export const experiences = [
   {
-    title: "AI Intern",
-    company: "Field Genie / IOT++ / MultipliedAI",
-    location: "Remote",
-    period: "May 2025 - July 2025",
-    type: "Industry",
-    number: "01",
+    title: "AI Intern", company: "Field Genie / IOT++ / MultipliedAI", location: "Remote",
+    period: "12 May 2025 – 14 Jul 2025", type: "Industry", number: "01",
     highlights: [
-      "Developed Agentic OS building multiple agents and integrating them into LangGraph and LangChain",
-      "Implemented and built multiple MCP servers for automating different tasks of the company",
-      "Created RAG tools for different MCP agents along with a Vector Database in MongoDB",
-      "Worked in backend and frontend using ReactJS and FastAPI to integrate Langgraph agents",
-    ],
-    tech: ["LangGraph", "LangChain", "PyTorch", "ReactJS", "FastAPI", "MCP"],
+      "Developed an Agentic OS, building multiple agents and integrating them into LangGraph and LangChain.",
+      "Implemented multiple MCP servers to automate company tasks using FastAPI.",
+    ], tech: ["LangGraph", "LangChain", "MCP", "FastAPI"],
   },
   {
-    title: "Remote Research Intern",
-    company: "Indian Statistical Institute",
-    location: "West Bengal, India",
-    period: "Nov 2024 - Jan 2025",
-    type: "Research",
-    number: "02",
+    title: "Research Intern", company: "Indian Statistical Institute", location: "Remote",
+    period: "25 Nov 2024 – 25 Jan 2025", type: "Research", number: "02",
     highlights: [
-      "Studied Vision Language Models like CLIP, BLIP, BLIP2 along with their architecture and implementation",
-      "Worked on infusing Normalizing Flow and Variational Auto-Encoder in VLMs to improve performance",
-      "Got significantly better results than original papers and publishing paper for the same",
-    ],
-    tech: ["Transformers", "Vision Language Models", "VAE", "Normalizing Flows", "PyTorch"],
+      "Worked on CLIP, BLIP and BLIP2 vision-language models, studying their architecture and implementation.",
+      "Worked on integrating Normalizing Flow and Variational Auto-Encoders into VLMs to improve performance.",
+    ], tech: ["CLIP", "BLIP", "BLIP2", "Normalizing Flow", "VAE"],
   },
   {
-    title: "Onsite Research Intern",
-    company: "Visual AI Lab, Changwon National University",
-    location: "South Korea",
-    period: "May 2024 - July 2024",
-    type: "Research",
-    number: "03",
+    title: "Research Intern", company: "Visual AI Lab, Changwon National University", location: "South Korea · Onsite",
+    period: "15 May 2024 – 15 Jul 2024", type: "Research", number: "03",
     highlights: [
-      "Comparative study in 2D object detection using YOLOv8 and other YOLO architectures",
-      "Implemented BEVFusion research paper by MIT, learning about Swin Transformer",
-      "Studied VoxelNet architecture to process LIDAR Point Cloud Data and convert to BEV feature maps",
-      "Used Detectron2 library for Transfer learning on custom datasets",
-    ],
-    tech: ["PyTorch", "CNN", "Transformers", "Detectron2", "CUDA", "Jupyter"],
+      "Implemented MIT's BEVFusion research paper and studied the Swin Transformer.",
+      "Used Facebook AI Research's Detectron2 library for transfer learning on a custom dataset.",
+    ], tech: ["BEVFusion", "Swin Transformer", "Detectron2", "Transfer Learning"],
   },
 ];
 

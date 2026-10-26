@@ -6,8 +6,8 @@ import { Briefcase, GraduationCap, Trophy, Users, ArrowUpRight } from "lucide-re
 const highlights = [
   {
     icon: GraduationCap,
-    title: "IIT (BHU) Varanasi",
-    description: "B.Tech Electrical Engineering",
+    title: "UCL · IIT (BHU)",
+    description: "MSc Robotics & AI · B.Tech Electrical Engineering",
     number: "01",
   },
   {
@@ -25,7 +25,7 @@ const highlights = [
   {
     icon: Users,
     title: "Leadership",
-    description: "JGS, Science & Tech Council",
+    description: "Former JGS, Science & Tech Council",
     number: "04",
   },
 ];
@@ -62,10 +62,10 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm an undergraduate researcher at{" "}
-              <span className="text-foreground font-medium">IIT (BHU) Varanasi</span>, 
-              pursuing Electrical Engineering with deep focus on artificial intelligence, 
-              robotics, and computer vision.
+              I'm pursuing a master's in Robotics and Artificial Intelligence at{" "}
+              <span className="text-foreground font-medium">University College London (UCL)</span>.
+              I completed my B.Tech in Electrical Engineering at IIT (BHU) Varanasi in July 2026,
+              with a focus on artificial intelligence, robotics, and computer vision.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -77,20 +77,20 @@ export function About() {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently exploring the intersection of deep learning and robotic control systems, 
-              creating intelligent machines that perceive, understand, and act in complex 
-              real-world environments.
+              My interests include robotics, computer vision, natural language processing,
+              leadership and management. As Joint General Secretary of the Science and
+              Technology Council, I represented 5,000+ students and led over 100 events.
             </p>
 
             {/* Quick Stats */}
             <div className="flex flex-wrap gap-6 pt-6 border-t border-border">
               <div>
-                <span className="text-3xl font-mono text-primary">3+</span>
-                <span className="text-sm text-muted-foreground ml-2 font-mono uppercase tracking-wider">Research Internships</span>
+                <span className="text-3xl font-mono text-primary">3</span>
+                <span className="text-sm text-muted-foreground ml-2 font-mono uppercase tracking-wider">Internships</span>
               </div>
               <div>
-                <span className="text-3xl font-mono text-accent">1000+</span>
-                <span className="text-sm text-muted-foreground ml-2 font-mono uppercase tracking-wider">Students Led</span>
+                <span className="text-3xl font-mono text-accent">5,000+</span>
+                <span className="text-sm text-muted-foreground ml-2 font-mono uppercase tracking-wider">Students Represented</span>
               </div>
             </div>
           </motion.div>

@@ -13,7 +13,7 @@ const services = [
       "Object Detection & Tracking",
       "Semantic Segmentation",
       "Vision-Language Models",
-      "Image Generation & Editing",
+      "Transfer Learning",
     ],
     number: "01",
   },
@@ -24,7 +24,7 @@ const services = [
       "End-to-end machine learning solutions from research and experimentation to production-ready systems with a focus on practical deployment.",
     capabilities: [
       "Model Development",
-      "RAG & LLM Applications",
+      "Vision-Language Models",
       "Agentic AI Systems",
       "Research to Production",
     ],
@@ -36,7 +36,7 @@ const services = [
     description:
       "Full-stack robotics development including perception, planning, and control systems for autonomous navigation and manipulation tasks.",
     capabilities: [
-      "ROS Development",
+      "ROS / ROS2 Development",
       "SLAM & Localization",
       "Motion Planning",
       "Sensor Fusion",

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Github, Linkedin, Send, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Github, Linkedin, Send, MapPin, ArrowUpRight, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -14,11 +14,12 @@ const EMAILJS_TEMPLATE_ID = "template_q81cos9";
 const EMAILJS_PUBLIC_KEY = "kotV9Pg7BiqppZavl";
 
 const socialLinks = [
+  { name: "Phone", icon: Phone, href: "tel:+447846230466", label: "+44 78462 30466" },
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:rickthosarkar77@gmail.com",
-    label: "rickthosarkar77@gmail.com",
+    href: "mailto:sarkar.ricktho@gmail.com",
+    label: "sarkar.ricktho@gmail.com",
   },
   {
     name: "GitHub",
@@ -42,13 +43,15 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = formRef.current;
+    if (!form) return;
     setIsSubmitting(true);
     
     try {
       await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        formRef.current!,
+        form,
         EMAILJS_PUBLIC_KEY
       );
       
@@ -117,7 +120,7 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-mono text-xs uppercase tracking-widest text-foreground mb-1">Location</h4>
-                <p className="text-muted-foreground">IIT (BHU) Varanasi, India</p>
+                <p className="text-muted-foreground">UCL, London, United Kingdom</p>
               </div>
             </div>
 
@@ -126,16 +129,16 @@ export function Contact() {
                 <a
                   key={link.name}
                   href={link.href}
-                  target={link.href.startsWith("mailto") ? undefined : "_blank"}
+                  target={/^(mailto|tel):/.test(link.href) ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 border border-border hover:border-primary transition-colors group"
                 >
                   <div className="w-10 h-10 border border-border group-hover:border-primary flex items-center justify-center transition-colors">
                     <link.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <div className="font-mono text-xs uppercase tracking-widest text-foreground">{link.name}</div>
-                    <div className="text-sm text-muted-foreground">{link.label}</div>
+                    <div className="text-sm text-muted-foreground break-words">{link.label}</div>
                   </div>
                   <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 </a>

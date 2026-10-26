@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImage from "@/assets/profile.jpg";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const stats = [
-  { value: "5+", label: "Projects" },
+  { value: "4", label: "Projects" },
   { value: "3", label: "Internships" },
-  { value: "1000+", label: "Students Led" },
+  { value: "5,000+", label: "Students Represented" },
 ];
 
 export function Hero() {
@@ -70,8 +71,9 @@ export function Hero() {
               className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
             >
               Building intelligent systems at the intersection of AI, robotics, and autonomy. 
-              Currently exploring deep learning for robotic perception at{" "}
-              <span className="text-foreground font-medium marker-highlight">IIT (BHU) Varanasi</span>.
+              Pursuing an MSc in Robotics and Artificial Intelligence at{" "}
+              <span className="text-foreground font-medium marker-highlight">UCL</span>,
+              following a B.Tech in Electrical Engineering from IIT (BHU) Varanasi.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -105,7 +107,7 @@ export function Hero() {
                 size="lg"
                 className="text-muted-foreground hover:text-foreground font-mono uppercase tracking-wider text-sm underline-grow"
               >
-                <a href="https://drive.google.com/file/d/1A_C9qNiDxB757loksaqB1rOnrFQ98dYH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href={resumeAsset.url} target="_blank" rel="noopener noreferrer">
                   Resume ↗
                 </a>
               </Button>
@@ -116,7 +118,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1, duration: 0.6 }}
-              className="flex gap-12 border-t border-border pt-8"
+              className="grid grid-cols-3 gap-3 sm:gap-8 border-t border-border pt-8 [&_.stat-highlight]:text-3xl sm:[&_.stat-highlight]:text-5xl"
             >
               {stats.map((stat, i) => (
                 <div key={stat.label}>
@@ -161,7 +163,7 @@ export function Hero() {
               {[
                 { icon: Github, href: "https://github.com/Ricktho1", label: "GitHub" },
                 { icon: Linkedin, href: "https://linkedin.com/in/rickthosarkar", label: "LinkedIn" },
-                { icon: Mail, href: "mailto:rickthosarkar77@gmail.com", label: "Email" },
+                { icon: Mail, href: "mailto:sarkar.ricktho@gmail.com", label: "Email" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -205,7 +207,7 @@ export function Hero() {
         className="absolute right-4 top-1/2 -translate-y-1/2 hidden xl:block"
       >
         <div className="font-mono text-xs text-muted-foreground transform rotate-90 origin-center whitespace-nowrap">
-          Open to Research Opportunities — 2025
+          Open to Research Opportunities — 2026
         </div>
       </motion.div>
     </section>

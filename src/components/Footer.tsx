@@ -35,7 +35,7 @@ export function Footer() {
             {[
               { icon: Github, href: "https://github.com/Ricktho1", label: "GitHub" },
               { icon: Linkedin, href: "https://linkedin.com/in/rickthosarkar", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:rickthosarkar77@gmail.com", label: "Email" },
+              { icon: Mail, href: "mailto:sarkar.ricktho@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
@@ -57,7 +57,7 @@ export function Footer() {
             Built with React, Tailwind, and Framer Motion
           </p>
           <p className="font-mono text-xs text-muted-foreground">
-            Varanasi, India
+            London, United Kingdom
           </p>
         </div>
       </div>

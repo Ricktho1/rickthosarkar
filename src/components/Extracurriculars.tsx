@@ -13,7 +13,7 @@ const extracurriculars = [
   {
     icon: Palette,
     title: "Fine Arts",
-    description: "Completed 1st year in Fine Arts, exploring visual creativity and artistic expression",
+    description: "Completed 1st year in Fine Arts, specifically sketching and oil pastel colours",
     number: "02",
   },
   {

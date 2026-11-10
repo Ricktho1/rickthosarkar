@@ -8,39 +8,95 @@ import projectLunar from "@/assets/project-lunar.jpg";
 import projectVehicle from "@/assets/project-vehicle.jpg";
 import projectPackage from "@/assets/project-package.jpg";
 import projectAgri from "@/assets/project-agri.jpg";
+import projectRobodog from "@/assets/project-robodog.svg";
+import projectFederated from "@/assets/project-federated.svg";
+import projectVision from "@/assets/project-vision.svg";
+import projectQuant from "@/assets/project-quant.svg";
 
-export const projects = [
+type ProjectLink = { label: string; url: string };
+
+export const projects: {
+  title: string; category: string; organization: string; period: string;
+  description: string; details: string[]; outcome: string; tech: string[];
+  image: string; number: string; links: ProjectLink[];
+}[] = [
+  {
+    title: "AI Robot Assistance Dog for Deaf & Blind People", category: "Robotics / Agentic AI",
+    organization: "AgentVerse 2026 · Google DeepMind Award", period: "7 – 8 Nov 2026",
+    description: "Built in 24 hours with a team of five: a Unitree Go2 quadruped in MuJoCo that hears alerts, finds its owner and guides them.",
+    details: ["Used YAMNet with spectral rules on simulated stereo audio for sound detection and localisation, and Whisper for spoken commands.", "Ran the whole system as fully local AI: Gemma 4 via Ollama for decisions and YOLOv8n for vision."],
+    outcome: "Won the Google DeepMind Award at AgentVerse 2026 (UCL AI Society) among 400+ participants, with 96% sound detection and 0% false alerts.",
+    tech: ["Unitree Go2", "MuJoCo", "YAMNet", "Whisper", "Gemma 4", "Ollama", "YOLOv8n"], image: projectRobodog, number: "01",
+    links: [],
+  },
   {
     title: "High-Resolution Elemental Mapping of the Moon’s Surface", category: "Space Science / AI",
     organization: "ISRO / Inter-IIT Tech Meet 13.0", period: "Sep 2024 – Jan 2025",
     description: "Developed a method to analyze XRF data from Chandrayaan-2’s CLASS for elemental mapping of the Moon.",
     details: ["Analyzed astronomical time-series data in FITS format using XSPEC in a Unix-based kernel.", "Applied DCT and Drizzle image processing to structured data to increase spatial resolution."],
     outcome: "Ranked 4th among all 23 IITs for the ISRO High-Prep Problem Statement at Inter-IIT Tech Meet 13.0.",
-    tech: ["XRF", "FITS", "XSPEC", "Unix", "DCT", "Drizzle"], image: projectLunar, number: "01",
+    tech: ["XRF", "FITS", "XSPEC", "Unix", "DCT", "Drizzle", "Python", "Go"], image: projectLunar, number: "02",
+    links: [],
   },
   {
     title: "Autonomous Vehicle", category: "Robotics / Autonomy",
     organization: "Technical Coordinator · Team Averera, IIT (BHU)", period: "Sep 2023 – Jul 2024",
     description: "Worked on an SAE Level 3 autonomous vehicle using 3D LiDAR and cameras for navigation.",
-    details: ["Worked towards applying HDL graph SLAM and the Pure Pursuit package for autonomous navigation.", "Applied CNN-based segmentation and trajectory planning, validated in hardware with real-time inference."],
+    details: ["Worked towards applying HDL graph SLAM and the Pure Pursuit package for autonomous navigation.", "Applied CNN-based segmentation and trajectory planning, validated in hardware with real-time inference.", "Simulated in CARLA with ROS and deployed on a Jetson Xavier with PID control."],
     outcome: "Validated CNN-based segmentation and trajectory planning in hardware with real-time inference.",
-    tech: ["3D LiDAR", "Cameras", "HDL Graph SLAM", "Pure Pursuit", "CNN"], image: projectVehicle, number: "02",
+    tech: ["3D LiDAR", "Cameras", "HDL Graph SLAM", "Pure Pursuit", "CNN", "ROS", "CARLA", "Jetson Xavier"], image: projectVehicle, number: "03",
+    links: [
+      { label: "Sample Video", url: "https://drive.google.com/file/d/1fqR32DyKsybwOtGJQTwd0Qjxw9hV2wr1/view" },
+      { label: "Team Averera", url: "https://www.teamaverera.com/" },
+    ],
   },
   {
     title: "Agricultural Manual & Autonomous Bots", category: "Robotics",
-    organization: "Team Robocon 2024, IIT (BHU)", period: "Dec 2024 – Apr 2025",
+    organization: "Team Robocon 2024, IIT (BHU)", period: "Jan 2024 – Apr 2024",
     description: "Developed manual and autonomous bots to pick seedlings, paddy rice and empty grain in designated areas.",
     details: ["Simulated and implemented in Gazebo ROS with 2D LiDAR, IMU, cameras and motors using PID control.", "Used Jetson Nano and Raspberry Pi with existing Tele-operations and SLAM packages."],
     outcome: "Qualified Stage 1 of Robocon 2024, represented IIT (BHU) in Stage 2 and exhibited the bot in Stage 3.",
-    tech: ["Gazebo", "ROS", "2D LiDAR", "IMU", "PID", "Jetson Nano", "Raspberry Pi", "SLAM"], image: projectAgri, number: "03",
+    tech: ["Gazebo", "ROS", "2D LiDAR", "IMU", "PID", "Jetson Nano", "Raspberry Pi", "SLAM"], image: projectAgri, number: "04",
+    links: [{ label: "DD Robocon", url: "http://www.ddrobocon.in/index.php" }],
   },
   {
     title: "Autonomous Robotic Bot for Package Control", category: "Robotics / Manipulation",
     organization: "Flipkart Grid 5.0", period: "Sep 2023 – Nov 2023",
     description: "Developed an autonomous robotic arm for identifying and manipulating packages in warehouses.",
     details: ["Implemented a core-XY mechanism and inverse kinematics using Arduino and stepper motors.", "Used YOLOv5 to detect packages with custom datasets from Roboflow."],
-    outcome: "Built a package-identification and manipulation system combining visual detection and robotic control.",
-    tech: ["Core-XY", "Inverse Kinematics", "Arduino", "Stepper Motors", "YOLOv5", "Roboflow"], image: projectPackage, number: "04",
+    outcome: "Honourable mention and a top-30 finish among 100+ teams, with a package-identification and manipulation system combining visual detection and robotic control.",
+    tech: ["Core-XY", "Inverse Kinematics", "Arduino", "Stepper Motors", "YOLOv5", "Roboflow"], image: projectPackage, number: "05",
+    links: [
+      { label: "Video", url: "https://www.youtube.com/watch?v=LkgdX7k3M0I" },
+      { label: "Documentation", url: "https://docs.google.com/document/d/1jgyB6n9W82oVNq5gm8kLpuxP8gcEZxgXiXwt3AA8va4/edit" },
+    ],
+  },
+  {
+    title: "Client Selection in Federated Learning", category: "Research / ML",
+    organization: "DRDO Research Project, IIT (BHU)", period: "Research project",
+    description: "Built a reinforcement-learning framework that chooses which drone clients train a shared model, while protecting their privacy.",
+    details: ["Developed a client selection framework leveraging reinforcement learning for efficient simulation.", "Tuned the privacy budget and introduced novel parameters related to drone clients.", "Integrated novel methods with approaches from complementary research."],
+    outcome: "Led to the MAML-Select paper, currently under review at IEEE Transactions in AI.",
+    tech: ["Federated Learning", "Reinforcement Learning", "Differential Privacy", "Meta-Learning"], image: projectFederated, number: "06",
+    links: [{ label: "Read the Paper Details", url: "#research" }],
+  },
+  {
+    title: "VISION-23", category: "Computer Vision / Simulation",
+    organization: "Robotics Club, IIT (BHU) · GitHub", period: "2023",
+    description: "The official arena for Vision’23, the Robotics Club’s image-processing robotics competition for freshers, built as an OpenAI Gym environment.",
+    details: ["Participants write code that detects a target and navigates a simulated robot to the goal.", "Runs on Python with PyBullet for physics and OpenCV for vision."],
+    outcome: "Used to run and evaluate submissions for the club’s Vision’23 competition.",
+    tech: ["Python", "PyBullet", "OpenCV", "OpenAI Gym"], image: projectVision, number: "07",
+    links: [{ label: "GitHub", url: "https://github.com/Ricktho1/VISION-23" }],
+  },
+  {
+    title: "Quant Resources", category: "Open Source",
+    organization: "GitHub", period: "Open source",
+    description: "A community library of books and guides for quantitative finance interviews and study.",
+    details: ["Collects classic interview and quant finance texts in one place for students preparing for quant roles.", "Open for others to contribute their own resources."],
+    outcome: "My most popular repository, with 505 stars and 77 forks.",
+    tech: ["Quant Finance", "Open Source"], image: projectQuant, number: "08",
+    links: [{ label: "GitHub", url: "https://github.com/Ricktho1/Quant_resources" }],
   },
 ];
 
@@ -161,22 +217,36 @@ export function Projects() {
                 </div>
 
                 {/* Actions */}
-                <Button
-                  variant="ghost"
-                  className="font-mono text-xs uppercase tracking-wider text-primary hover:text-primary hover:bg-primary/10 p-0"
-                  onClick={() =>
-                    setExpandedProject(
-                      expandedProject === project.title ? null : project.title
-                    )
-                  }
-                >
-                  {expandedProject === project.title ? "Show Less" : "Learn More"}
-                  {expandedProject === project.title ? (
-                    <ChevronDown className="w-4 h-4 ml-2" />
-                  ) : (
-                    <ChevronRight className="w-4 h-4 ml-2" />
-                  )}
-                </Button>
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+                  <Button
+                    variant="ghost"
+                    className="font-mono text-xs uppercase tracking-wider text-primary hover:text-primary hover:bg-primary/10 p-0"
+                    onClick={() =>
+                      setExpandedProject(
+                        expandedProject === project.title ? null : project.title
+                      )
+                    }
+                  >
+                    {expandedProject === project.title ? "Show Less" : "Learn More"}
+                    {expandedProject === project.title ? (
+                      <ChevronDown className="w-4 h-4 ml-2" />
+                    ) : (
+                      <ChevronRight className="w-4 h-4 ml-2" />
+                    )}
+                  </Button>
+                  {project.links.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target={link.url.startsWith("#") ? undefined : "_blank"}
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-mono text-xs uppercase tracking-wider text-foreground hover:text-primary transition-colors underline-grow"
+                    >
+                      {link.label}
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </motion.article>
           ))}

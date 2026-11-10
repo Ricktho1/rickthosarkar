@@ -11,9 +11,11 @@ describe("current technical resume", () => {
     expect(experiences).toHaveLength(3);
     expect(stats.find(stat => stat.label === "Internships")?.value).toBe("3");
   });
-  it("records the four current projects including Flipkart", () => {
-    expect(projects).toHaveLength(4);
+  it("records all eight projects including Flipkart and AgentVerse", () => {
+    expect(projects).toHaveLength(8);
+    expect(stats.find(stat => stat.label === "Projects")?.value).toBe("8");
     expect(projects.find(project => project.organization === "Flipkart Grid 5.0")?.period).toBe("Sep 2023 – Nov 2023");
+    expect(projects[0].organization).toContain("AgentVerse 2026");
   });
   it("records the Robocon stage outcomes without claiming a win", () => {
     expect(projects.find(project => project.organization === "Team Robocon 2024, IIT (BHU)")?.outcome).toBe("Qualified Stage 1 of Robocon 2024, represented IIT (BHU) in Stage 2 and exhibited the bot in Stage 3.");

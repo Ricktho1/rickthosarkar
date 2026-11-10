@@ -20,6 +20,10 @@ const otherRoles = [
     description: "Managed logistics and hospitality for 100+ participants. Oversaw a standardised 16 ft × 16 ft × 8 ft arena, infrastructure and finances, while maintaining team safety and food requirements." },
   { icon: Bot, role: "Founder and Team Leader", organization: "IIT (BHU) Robocon Team, 2024", period: "Jan 2024 – Apr 2024",
     description: "Founded and led the institute’s first 15-member multi-domain team at National DD Robocon 2024. Secured necessary resources and supported the team’s continuity for future years." },
+  { icon: Car, role: "Technical Coordinator", organization: "Team Averera, IIT (BHU)", period: "Sep 2023 – Jul 2024",
+    description: "Coordinated the technical work of the institute’s autonomous vehicle team, building an SAE Level 3 car that navigates with 3D LiDAR and cameras." },
+  { icon: Cog, role: "Technical Lead", organization: "RoboReG, Robotics Club, IIT (BHU)", period: "IIT (BHU) Varanasi",
+    description: "Promoted a research culture in the college by leading student research projects in robotics." },
 ];
 
 export function Memberships() {

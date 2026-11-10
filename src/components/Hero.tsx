@@ -5,7 +5,7 @@ import profileImage from "@/assets/profile.jpg";
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export const stats = [
-  { value: "4", label: "Projects" },
+  { value: "8", label: "Projects" },
   { value: "3", label: "Internships" },
   { value: "5,000+", label: "Students Represented" },
 ];
@@ -70,7 +70,7 @@ export function Hero() {
               transition={{ delay: 0.7, duration: 0.6 }}
               className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
             >
-              Building intelligent systems at the intersection of AI, robotics, and autonomy. 
+              Building intelligent systems at the intersection of AI, robotics, and autonomy.
               Pursuing an MSc in Robotics and Artificial Intelligence at{" "}
               <span className="text-foreground font-medium marker-highlight">UCL</span>,
               following a B.Tech in Electrical Engineering from IIT (BHU) Varanasi.

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700"><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2A241E" stroke-opacity=".07" stroke-width="1.5"/></pattern></defs><rect width="1200" height="700" fill="#F3EFE7"/><rect width="1200" height="700" fill="url(#g)"/>
+<path d="M300 200H900L1060 600H140Z" fill="#E6E0D4" stroke="#2A241E" stroke-width="6"/>
+<g stroke="#2A241E" stroke-opacity=".3" stroke-width="3"><path d="M260 300H940M220 400H980M180 500H1020"/><path d="M420 200L380 600M540 200L520 600M660 200L680 600M780 200L820 600"/></g>
+<path d="M410 520L780 250L860 300Z" fill="#0D8F84" opacity=".18"/>
+<path d="M430 520C560 470 680 380 790 280" fill="none" stroke="#0D8F84" stroke-width="8" stroke-dasharray="20 16"/>
+<rect x="770" y="225" width="90" height="70" fill="#E8704F"/>
+<circle cx="420" cy="525" r="48" fill="#2A241E"/><path d="M420 525l42-28" stroke="#F3EFE7" stroke-width="10" stroke-linecap="round"/>
+<circle cx="445" cy="508" r="8" fill="#0D8F84"/>
+<text x="140" y="660" font-family="IBM Plex Mono, Courier New, monospace" font-size="30" fill="#2A241E" opacity=".7">VISION'23 · PYBULLET ARENA · OPENCV</text>
+</svg>

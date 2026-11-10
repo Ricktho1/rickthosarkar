@@ -10,7 +10,9 @@ export const experiences = [
     highlights: [
       "Developed an Agentic OS, building multiple agents and integrating them into LangGraph and LangChain.",
       "Implemented multiple MCP servers to automate company tasks using FastAPI.",
-    ], tech: ["LangGraph", "LangChain", "MCP", "FastAPI"],
+      "Created RAG tools for the MCP agents, backed by a sample vector database in MongoDB.",
+      "Integrated the LangGraph agents into the company website across a ReactJS frontend and FastAPI backend.",
+    ], tech: ["LangGraph", "LangChain", "MCP", "FastAPI", "RAG", "MongoDB", "ReactJS"],
   },
   {
     title: "Research Intern", company: "Indian Statistical Institute", location: "Remote",
@@ -18,15 +20,18 @@ export const experiences = [
     highlights: [
       "Worked on CLIP, BLIP and BLIP2 vision-language models, studying their architecture and implementation.",
       "Worked on integrating Normalizing Flow and Variational Auto-Encoders into VLMs to improve performance.",
-    ], tech: ["CLIP", "BLIP", "BLIP2", "Normalizing Flow", "VAE"],
+      "Achieved significantly better results than the original papers, with a paper in preparation.",
+    ], tech: ["CLIP", "BLIP", "BLIP2", "Normalizing Flow", "VAE", "Transformers"],
   },
   {
     title: "Research Intern", company: "Visual AI Lab, Changwon National University", location: "South Korea · Onsite",
     period: "15 May 2024 – 15 Jul 2024", type: "Research", number: "03",
     highlights: [
       "Implemented MIT's BEVFusion research paper and studied the Swin Transformer.",
+      "Studied the VoxelNet architecture for converting LiDAR point clouds into BEV feature maps.",
+      "Ran a comparative study of 2D object detection with YOLOv8 and earlier YOLO versions.",
       "Used Facebook AI Research's Detectron2 library for transfer learning on a custom dataset.",
-    ], tech: ["BEVFusion", "Swin Transformer", "Detectron2", "Transfer Learning"],
+    ], tech: ["BEVFusion", "Swin Transformer", "VoxelNet", "YOLOv8", "Detectron2", "Transfer Learning"],
   },
 ];
 

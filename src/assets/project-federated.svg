@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700"><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2A241E" stroke-opacity=".07" stroke-width="1.5"/></pattern><g id="d"><g fill="none" stroke="#2A241E" stroke-width="12" stroke-linecap="round"><path d="M-70 0H70M0 -14V14"/></g><circle cx="-70" cy="0" r="24" fill="none" stroke="#2A241E" stroke-width="8"/><circle cx="70" cy="0" r="24" fill="none" stroke="#2A241E" stroke-width="8"/><rect x="-26" y="-10" width="52" height="34" rx="8" fill="#E8704F"/></g>
+</defs><rect width="1200" height="700" fill="#F3EFE7"/><rect width="1200" height="700" fill="url(#g)"/>
+<g stroke="#0D8F84" stroke-width="7" stroke-dasharray="20 16" fill="none"><path d="M600 350L270 170"/><path d="M600 350L930 170"/><path d="M600 350L270 530"/><path d="M600 350L930 530"/></g>
+<rect x="500" y="270" width="200" height="160" rx="10" fill="#2A241E"/>
+<g fill="#0D8F84"><rect x="530" y="370" width="22" height="40"/><rect x="562" y="340" width="22" height="70"/><rect x="594" y="310" width="22" height="100"/><rect x="626" y="350" width="22" height="60"/></g>
+<rect x="530" y="292" width="140" height="10" rx="5" fill="#F3EFE7" opacity=".5"/>
+<use href="#d" x="270" y="170"/><use href="#d" x="930" y="170"/><use href="#d" x="270" y="530" opacity=".55"/><use href="#d" x="930" y="530" opacity=".3"/>
+<g fill="#E8704F"><circle cx="430" cy="258" r="9"/><circle cx="770" cy="258" r="9"/></g>
+<text x="420" y="640" font-family="IBM Plex Mono, Courier New, monospace" font-size="30" fill="#2A241E" opacity=".7">SELECT CLIENTS · AGGREGATE · REPEAT</text>
+</svg>

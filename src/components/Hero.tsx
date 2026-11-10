@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImage from "@/assets/profile.jpg";
-import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export const stats = [
   { value: "14", label: "Projects" },
@@ -100,16 +99,6 @@ export function Hero() {
                 className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background font-mono uppercase tracking-wider text-sm px-8 rounded-none hover-brutal"
               >
                 <a href="#contact">Contact</a>
-              </Button>
-              <Button
-                asChild
-                variant="ghost"
-                size="lg"
-                className="text-muted-foreground hover:text-foreground font-mono uppercase tracking-wider text-sm underline-grow"
-              >
-                <a href={resumeAsset.url} target="_blank" rel="noopener noreferrer">
-                  Resume ↗
-                </a>
               </Button>
             </motion.div>
 

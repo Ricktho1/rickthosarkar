@@ -4,7 +4,6 @@ import { experiences } from "../components/Experience";
 import { projects, featuredProjects, miniProjects } from "../components/Projects";
 import { highlightedRoles } from "../components/Memberships";
 import { researchPaper } from "../components/Research";
-import resume from "../assets/resume.pdf.asset.json";
 
 describe("current technical resume", () => {
   it("retains exactly three internships", () => {
@@ -28,9 +27,5 @@ describe("current technical resume", () => {
   it("does not treat the research paper as published", () => {
     expect(researchPaper.status).toBe("Under Review");
     expect(researchPaper.journal).toBe("IEEE Transactions in AI");
-  });
-  it("opens an uploaded PDF asset rather than the old Drive resume", () => {
-    expect(resume.content_type).toBe("application/pdf");
-    expect(resume.url).toMatch(/^\/__l5e\/assets-v1\/.+\/Ricktho-Sarkar-Resume\.pdf$/);
   });
 });

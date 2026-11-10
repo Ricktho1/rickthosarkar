@@ -5,7 +5,7 @@ import profileImage from "@/assets/profile.jpg";
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export const stats = [
-  { value: "8", label: "Projects" },
+  { value: "14", label: "Projects" },
   { value: "3", label: "Internships" },
   { value: "5,000+", label: "Students Represented" },
 ];

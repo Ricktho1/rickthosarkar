@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { stats } from "../components/Hero";
 import { experiences } from "../components/Experience";
-import { projects } from "../components/Projects";
+import { projects, featuredProjects, miniProjects } from "../components/Projects";
 import { highlightedRoles } from "../components/Memberships";
 import { researchPaper } from "../components/Research";
 import resume from "../assets/resume.pdf.asset.json";
@@ -11,9 +11,10 @@ describe("current technical resume", () => {
     expect(experiences).toHaveLength(3);
     expect(stats.find(stat => stat.label === "Internships")?.value).toBe("3");
   });
-  it("records all eight projects including Flipkart and AgentVerse", () => {
-    expect(projects).toHaveLength(8);
-    expect(stats.find(stat => stat.label === "Projects")?.value).toBe("8");
+  it("records all projects including Flipkart and AgentVerse", () => {
+    expect(projects).toHaveLength(11);
+    expect(featuredProjects).toHaveLength(3);
+    expect(stats.find(stat => stat.label === "Projects")?.value).toBe(String(projects.length + miniProjects.length));
     expect(projects.find(project => project.organization === "Flipkart Grid 5.0")?.period).toBe("Sep 2023 – Nov 2023");
     expect(projects[0].organization).toContain("AgentVerse 2026");
   });

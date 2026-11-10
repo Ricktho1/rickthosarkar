@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Trophy, Award, Medal, Star, Rocket, Brain, Target, Package } from "lucide-react";
 
 const achievements = [
-  { icon: Trophy, title: "Google DeepMind Award — AgentVerse 2026", description: "Won among 400+ participants at the UCL AI Society hackathon for an AI assistance robot dog.", category: "Hackathon", number: "01" },
+  { icon: Trophy, title: "Google DeepMind Award — AgentVerse 2026", description: "Won the Gemini prize and 2nd place in the Robotics Track at the UCL AI Society hackathon (400+ participants) for an AI assistance robot dog.", category: "Hackathon", number: "01" },
   { icon: Award, title: "IIT Color Award", description: "One of the highest awards at IIT (BHU), for significant contribution to the institute.", category: "Institute", number: "02" },
   { icon: Rocket, title: "4th Rank — Inter-IIT Tech Meet 13.0", description: "Among all 23 IITs for the ISRO High-Prep Problem Statement.", category: "Competition", number: "03" },
   { icon: Medal, title: "3rd Place — Cosmic Classifier", description: "ML event at Cognizance 2025, IIT Roorkee, among 200+ participants.", category: "ML", number: "04" },

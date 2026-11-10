@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700"><rect width="1200" height="700" fill="#2A241E"/>
+<g fill="#F3EFE7" opacity=".6"><circle cx="100" cy="80" r="3"/><circle cx="300" cy="200" r="2"/><circle cx="520" cy="60" r="3"/><circle cx="760" cy="150" r="2"/><circle cx="1000" cy="90" r="3"/><circle cx="1120" cy="300" r="2"/><circle cx="180" cy="420" r="2"/><circle cx="880" cy="420" r="3"/><circle cx="420" cy="360" r="2"/></g>
+<g fill="#E8704F"><path d="M300 120l70 20 30 60-40 50-70-10-30-60z"/><path d="M820 220l50 10 20 40-30 36-50-8-20-44z" opacity=".85"/><path d="M1000 380l40 10 14 30-24 28-40-6-14-34z" opacity=".7"/></g>
+<g stroke="#0D8F84" stroke-width="10" stroke-linecap="round"><path d="M600 470V400"/><path d="M600 360V300" opacity=".6"/></g>
+<path d="M600 480l60 120h-120z" fill="#F3EFE7"/><rect x="588" y="600" width="24" height="24" fill="#E8704F"/>
+<text x="40" y="670" font-family="IBM Plex Mono, Courier New, monospace" font-size="30" fill="#F3EFE7" opacity=".8">METEOR SHOOTER · SCORE 1280</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700"><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2A241E" stroke-opacity=".07" stroke-width="1.5"/></pattern></defs><rect width="1200" height="700" fill="#F3EFE7"/><rect width="1200" height="700" fill="url(#g)"/>
+<rect x="120" y="90" width="960" height="460" fill="#E6E0D4" stroke="#2A241E" stroke-width="6"/>
+<path d="M120 420H1080" stroke="#E8704F" stroke-width="8" stroke-dasharray="24 14"/>
+<g fill="#2A241E"><rect x="220" y="320" width="140" height="70" rx="14"/><rect x="520" y="380" width="160" height="80" rx="14"/><rect x="840" y="260" width="130" height="64" rx="14"/></g>
+<g fill="none" stroke="#0D8F84" stroke-width="7"><rect x="205" y="305" width="170" height="100"/><rect x="505" y="365" width="190" height="110"/><rect x="825" y="245" width="160" height="94"/></g>
+<g fill="#0D8F84"><rect x="205" y="273" width="120" height="32"/><rect x="505" y="333" width="120" height="32"/><rect x="825" y="213" width="120" height="32"/></g>
+<g font-family="IBM Plex Mono, Courier New, monospace" font-size="22" fill="#F3EFE7"><text x="214" y="297">obj 0.94</text><text x="514" y="357">obj 0.91</text><text x="834" y="237">obj 0.88</text></g>
+<rect x="880" y="470" width="180" height="60" fill="#2A241E"/><text x="900" y="511" font-family="IBM Plex Mono, Courier New, monospace" font-size="30" fill="#F3EFE7">COUNT 07</text>
+<text x="120" y="630" font-family="IBM Plex Mono, Courier New, monospace" font-size="30" fill="#2A241E" opacity=".7">YOLO · DETECT · TRACK · COUNT</text>
+</svg>

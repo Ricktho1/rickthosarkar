@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700"><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2A241E" stroke-opacity=".07" stroke-width="1.5"/></pattern></defs><rect width="1200" height="700" fill="#F3EFE7"/><rect width="1200" height="700" fill="url(#g)"/>
+<rect x="0" y="120" width="1200" height="380" fill="#E6E0D4"/>
+<g stroke="#2A241E" stroke-width="5" stroke-dasharray="40 30" opacity=".5"><path d="M0 245H1200M0 375H1200"/></g>
+<g fill="#2A241E"><rect x="120" y="150" width="200" height="70" rx="10"/><rect x="620" y="150" width="160" height="70" rx="10"/><rect x="380" y="280" width="220" height="70" rx="10"/><rect x="900" y="280" width="180" height="70" rx="10"/><rect x="200" y="410" width="170" height="70" rx="10"/><rect x="760" y="410" width="200" height="70" rx="10"/></g>
+<g stroke="#E8704F" stroke-width="10" stroke-linecap="round"><path d="M560 120L760 40M600 130L800 60"/></g>
+<g transform="translate(560 580)"><ellipse cx="0" cy="0" rx="46" ry="38" fill="#0D8F84"/><circle cx="-22" cy="-30" r="14" fill="#0D8F84"/><circle cx="22" cy="-30" r="14" fill="#0D8F84"/><circle cx="-22" cy="-32" r="6" fill="#2A241E"/><circle cx="22" cy="-32" r="6" fill="#2A241E"/><path d="M-46 10l-30 24M46 10l30 24" stroke="#0D8F84" stroke-width="12" stroke-linecap="round"/></g>
+<text x="40" y="680" font-family="IBM Plex Mono, Courier New, monospace" font-size="30" fill="#2A241E" opacity=".7">BLADE FROGGER · DODGE · HOP · SURVIVE</text>
+</svg>

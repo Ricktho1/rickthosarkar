@@ -43,10 +43,7 @@ export const featuredProjects: Project[] = [
     ],
     outcome: "Won the Google DeepMind Gemini prize and 2nd place in the Robotics Track at AgentVerse 2026, with 96% of alert sounds detected, no smoke alarm ever missed and 0% false alerts.",
     tech: ["Unitree Go2", "MuJoCo", "YAMNet", "Whisper", "Gemma 4", "Ollama", "YOLOv8n", "Piper TTS"], image: projectRobodog, number: "01",
-    links: [
-      { label: "GitHub", url: "https://github.com/Ricktho1/AI_guide_smart_dog" },
-      { label: "Demo Video", url: "https://drive.google.com/file/d/12cjB34Vrt6-VDNwTnTcYrqYkDT8Pb3om/view?usp=sharing" },
-    ],
+    links: [{ label: "GitHub", url: "https://github.com/Ricktho1/AI_guide_smart_dog" }],
   },
   {
     title: "High-Resolution Elemental Mapping of the Moon’s Surface", category: "Space Science / AI",
